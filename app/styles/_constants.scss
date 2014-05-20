@@ -1,0 +1,22 @@
+// Choose one of these to be your mainTheme color
+$green:  hsl(151, 65%, 60%);
+$blue:   hsl(216, 65%, 60%); // #850D1B
+$orange: hsl(6, 90%, 70%);
+$purple: hsl(260, 38%, 56%);
+
+// mine
+$deepRed:      #611806;
+$sublimeBlack: #141414;
+$thisBlue:     #7587a6;
+$sublBrown:    #9b7040;
+$sublYellow:   #dad085;
+$sublLtBrown:  #bfa869;
+$sublGreen:    #8f9d6a;
+$sublRed:      #9a614b;
+
+$offBlack: hsl(10, 1%, 22%);
+$grey:     lighten($offBlack, 50);
+
+$mainTheme: $sublimeBlack;
+$baseTextColor: $offBlack;
+$lightTextColor: $grey;

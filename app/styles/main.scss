@@ -1,23 +1,20 @@
-body {
+// bower:scss
+// endbower
+
+@import "utilities/hex";
+@import "utilities/_reset";
+@import "constants";
+
+html, body {
+    @include size(100%);
+
     background: #fafafa;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
 }
 
-.hero-unit {
-    margin: 50px auto 0 auto;
-    width: 300px;
-    font-size: 18px;
-    font-weight: 200;
-    line-height: 30px;
-    background-color: #eee;
-    border-radius: 6px;
-    padding: 60px;
-    h1 {
-        font-size: 60px;
-        line-height: 1;
-        letter-spacing: -1px;
-    }
+body {
+    @extend %no-highlight;
 }
 
 .browsehappy {
@@ -26,3 +23,30 @@ body {
     color: #000;
     padding: 0.2em 0;
 }
+
+.img-holder {
+    height: 200px;
+    width: 200px;
+}
+
+img {
+    @include size(100%);
+}
+
+em {
+    font-weight: bold;
+}
+
+.keyword-list {
+    display: inline;
+}
+
+.keywords {
+    display: inline-block;
+}
+
+.page-content {
+    padding-top: 58px;
+}
+
+@import "nav";

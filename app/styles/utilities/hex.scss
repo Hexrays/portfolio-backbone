@@ -1,0 +1,179 @@
+@mixin size($width, $height:null) {
+    @if $width != null {width: $width;}
+    @if $height != null {
+        height: $height;
+    } @else {
+        height: $width;
+    }
+}
+
+@mixin min-size($width, $height:null) {
+    @if $width  != null { min-width:  $width;}
+    @if $height != null {
+        min-height: $height;
+    } @else {
+        min-height: $width;
+    }
+}
+
+@mixin max-size($width, $height:null) {
+    @if $width  != null {max-width:  $width;}
+    @if $height != null {
+        max-height: $height;
+    } @else {
+        max-height: $width;
+    }
+}
+
+@mixin size-centered($width, $height) {
+    @if $width  != null {
+        width:  $width;
+        margin-left: -$width/2;
+    }
+    @if $height != null {
+        height: $height;
+        margin-top: -$height/2;
+    }
+}
+
+@mixin position($left:null, $top:null, $z-index:null, $right:null, $bottom:null) {
+    @if $left    != null {left:   $left;}
+    @if $top     != null {top:    $top;}
+    @if $right   != null {right:  $right;}
+    @if $bottom  != null {bottom: $bottom;}
+    @if $z-index != null {z-index: $z-index;}
+}
+
+@mixin position-absolute($left:null, $top:null, $z-index:null, $right:null, $bottom:null) {
+    position: absolute;
+    @include position($left, $top, $z-index, $right, $bottom);
+}
+
+@mixin position-relative($left:null, $top:null, $z-index:null, $right:null, $bottom:null) {
+    position: relative;
+    @include position($left, $top, $z-index, $right, $bottom);
+}
+
+@mixin position-fixed($left:null, $top:null, $z-index:null, $right:null, $bottom:null) {
+    position: fixed;
+    @include position($left, $top, $z-index, $right, $bottom);
+}
+
+%position-absolute-center {
+    @include position-absolute($left:0, $top:0, $right:0, $bottom:0);
+    margin: auto;
+}
+
+@mixin no-select() {
+    // Prevents highlighting of items
+    // https://developer.mozilla.org/en-US/docs/Web/CSS/user-select
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+%no-select {
+    @include no-select();
+}
+
+@mixin no-highlight() {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+%no-highlight {
+    @include no-highlight();
+}
+
+%no-highlight-or-select {
+    @include no-highlight();
+    @include no-select();
+}
+
+%no-pointer-events {
+    pointer-events: none;
+}
+
+@mixin webkit-accelerated() {
+    -webkit-transform:           translateZ(0);
+    -webkit-backface-visibility: hidden;
+}
+
+%webkit-accelerated {
+    @include webkit-accelerated();
+}
+
+@mixin fixed-font-rendering() {
+    -webkit-font-smoothing:  antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+%fixed-font-rendering {
+    @include fixed-font-rendering();
+}
+
+// Note: 568 px is iphone 5 landscape
+$BREAKPOINT-XSMALL : 35.5em  !default;  // 35.5em;   = 568px
+$BREAKPOINT-SMALL  : 40em    !default;  // 40em;     = 640px
+$BREAKPOINT-MEDIUM : 50em    !default;  // 50em;     = 800px
+$BREAKPOINT-LARGE  : 64em    !default;  // 64em;     = 1024px
+$BREAKPOINT-XLARGE : 82.5em  !default;  // 82.5em;   = 1320px
+$BREAKPOINT-FULL   : 63.75em !default;  // 63.75em;  = 1020px
+
+@mixin breakpoint($point, $minmax:max) {
+    @if $point == xs {
+        @media only screen and (#{$minmax}-width: $BREAKPOINT-XSMALL) { @content; }
+    } @else if $point == sm {
+        @media only screen and (#{$minmax}-width: $BREAKPOINT-SMALL)  { @content; }
+    } @else if $point == md {
+        @media only screen and (#{$minmax}-width: $BREAKPOINT-MEDIUM) { @content; }
+    } @else if $point == lg {
+        @media only screen and (#{$minmax}-width: $BREAKPOINT-LARGE)  { @content; }
+    } @else if $point == xl {
+        @media only screen and (#{$minmax}-width: $BREAKPOINT-XLARGE) { @content; }
+    } @else {
+        // Forgive me Jeff, I know I specifically told you to avoid inline, arbitrary
+        // breakpoints, but since scale transforms can't be performed percentage-based
+        // against window size, I've got to break my own rule.
+        @media only screen and (#{$minmax}-width: $point)             { @content; }
+    }
+}
+
+@mixin breakpoint-between($point-a, $point-b, $minmax:max, $weight:0.5) {
+    $start: $point-b;
+    $end:   $point-a;
+
+    @if $point-a > $point-b {
+        $start: $point-a;
+        $end:   $point-b;
+    }
+
+    @include breakpoint((($end - $start) * $weight) + $start, $minmax) {
+        @content;
+    };
+}
+
+@mixin orientation($orientation) {
+    @media only screen and (orientation : $orientation) { @content; }
+}
+
+@mixin orientation-breakpoint($orientation, $point, $minmax:max) {
+    @if $point == xs {
+        @media only screen and (orientation : $orientation) and (#{$minmax}-width: $BREAKPOINT-XSMALL) { @content; }
+    } @else if $point == sm {
+        @media only screen and (orientation : $orientation) and (#{$minmax}-width: $BREAKPOINT-SMALL)  { @content; }
+    } @else if $point == md {
+        @media only screen and (orientation : $orientation) and (#{$minmax}-width: $BREAKPOINT-MEDIUM) { @content; }
+    } @else if $point == lg {
+        @media only screen and (orientation : $orientation) and (#{$minmax}-width: $BREAKPOINT-LARGE)  { @content; }
+    } @else if $point == xl {
+        @media only screen and (orientation : $orientation) and (#{$minmax}-width: $BREAKPOINT-XLARGE) { @content; }
+    } @else {
+        // Forgive me Jeff, I know I specifically told you to avoid inline, arbitrary
+        // breakpoints, but since scale transforms can't be performed percentage-based
+        // against window size, I've got to break my own rule.
+        @media only screen and (orientation : $orientation) and (#{$minmax}-width: $point)             { @content; }
+    }
+}

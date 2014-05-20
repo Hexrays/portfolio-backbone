@@ -1,0 +1,98 @@
+// **************************************************
+// **************************************************
+// Header
+// **************************************************
+// **************************************************
+
+header {
+    @include position-fixed($top:0, $left:0, $z-index:100);
+    @include size(100%, auto);
+
+    background : $mainTheme;
+
+    a {
+        color           : $thisBlue;
+        text-decoration : none;
+
+        &:hover {
+            text-decoration : underline;
+        }
+    }
+
+    @include breakpoint(lg) {
+        // @include size(100%, auto);
+        // @include clearfix;
+
+        // overflow : hidden;
+    }
+}
+
+.name {
+    z-index     : 100;
+    float       : left;
+    padding     : 1em;
+    font-weight : normal;
+    font-size   : 1em;
+}
+
+.menu-link {
+    display : none;
+    float   : right;
+    padding : 1em;
+
+    @include breakpoint(xs){
+        display : block;
+    }
+}
+
+nav[role=navigation] {
+    overflow   : hidden;
+    max-height : none;
+    transition : all 0.4s ease-out;
+
+    &.active {
+        max-height : 15em;
+    }
+
+    @include breakpoint(xs){
+        max-height : 0;
+        clear      : both;
+    }
+}
+
+    .nav-list {
+        bottom     : 0;
+        float      : right;
+        margin     : 0 0 0 -0.25em;
+        padding    : 0;
+
+        @include breakpoint(xs){
+            bottom : auto;
+            margin : 0;
+            width  : 100%;
+            border-top : 1px solid #202020;
+        }
+    }
+
+        .nav-item {
+            display : inline-block;
+            margin  : 0 0.25em;
+            padding : 0;
+
+            @include breakpoint(xs){
+                width      : 100%;
+                text-align : center;
+            }
+        }
+
+        .nav-link {
+            display        : block;
+            padding        : 1em;
+            border         : 0;
+            // text-transform : capitalize;
+
+            @include breakpoint(xs){
+                padding       : 0.8em;
+                border-bottom : 1px solid #202020;
+            }
+        }
