@@ -2,7 +2,7 @@
 <html class="no-js">
     <head>
         <meta charset="utf-8">
-        <title>folio backbone</title>
+        <title>Hexrays.at</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -24,7 +24,7 @@
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <header>
+        <header class="site-header">
             <h1 class="name">
                 <a href="/">Jeff Denton</a>
             </h1>
@@ -36,6 +36,29 @@
                 </ul>
             </nav>
         </header>
+
+        <div id="main">
+            <div id="portfolio">
+                <header>
+                    <h1>Portfolio</h1>
+                </header>
+
+                <div class="portfolio-container">
+                    <ul id="portfolio-items"></ul>
+                </div>
+
+            </div>
+        </div>
+
+        <script id="siteTemplate" type="text/template">
+            <div class="img-holder"><img src="<%= image %>" alt="<%= title %>"></div>
+            <ul>
+                <li><%= title %></li>
+                <li>Description: <%= description %></li>
+                <li>Responsibilities: <%= responsibilities %></li>
+                <li>Keywords: <% _.each(keywords, function(keyobj) { %> <%= keyobj.keyword %> <% }); %></li>
+            </ul>
+        </script>
 
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -51,11 +74,18 @@
         <!-- build:js scripts/vendor.js -->
         <!-- bower:js -->
         <script src="bower_components/jquery/dist/jquery.js"></script>
+        <script src="bower_components/underscore/underscore.js"></script>
+        <script src="bower_components/backbone/backbone.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
-        <script src="scripts/main.js"></script>
+        <script src="scripts/data/portfolioData.js"></script>
+        <script src="scripts/models/site.js"></script>
+        <script src="scripts/collections/portfolio.js"></script>
+        <script src="scripts/views/portfolioView.js"></script>
+        <script src="scripts/views/siteView.js"></script>
+        <script src="scripts/app.js"></script>
         <!-- endbuild -->
 </body>
 </html>
