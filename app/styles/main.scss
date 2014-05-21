@@ -17,29 +17,9 @@ body {
     @extend %no-highlight;
 }
 
-.img-holder {
-    height: 200px;
-    width: 200px;
-}
-
-img {
-    @include size(100%);
-}
-
-em {
-    font-weight: bold;
-}
-
-.keyword-list {
-    display: inline;
-}
-
-.keywords {
-    display: inline-block;
-}
-
 #main {
     padding-top: 58px;
 }
 
 @import "nav";
+@import "portfolio";

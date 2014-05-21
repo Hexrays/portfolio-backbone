@@ -3,7 +3,7 @@
 var app = app || {};
 
 app.SiteView = Backbone.View.extend({
-    tagName: 'div',
+    tagName: 'li',
     className: 'siteContainer',
     template: _.template( $('#siteTemplate').html() ),
 

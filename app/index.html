@@ -39,7 +39,7 @@
 
         <div id="main">
             <div id="portfolio">
-                <header>
+                <header class="folio-header">
                     <h1>Portfolio</h1>
                 </header>
 
@@ -51,13 +51,15 @@
         </div>
 
         <script id="siteTemplate" type="text/template">
-            <div class="img-holder"><img src="<%= image %>" alt="<%= title %>"></div>
-            <ul>
-                <li><%= title %></li>
-                <li>Description: <%= description %></li>
-                <li>Responsibilities: <%= responsibilities %></li>
-                <li>Keywords: <% _.each(keywords, function(keyobj) { %> <%= keyobj.keyword %> <% }); %></li>
-            </ul>
+            <div class="site-item">
+                <div class="img-container"><img src="<%= image %>" alt="<%= title %>"></div>
+                <ul class="details">
+                    <li><%= title %></li>
+                    <li>Description: <%= description %></li>
+                    <li>Responsibilities: <%= responsibilities %></li>
+                    <li>Keywords: <% _.each(keywords, function(keyobj) { %> <%= keyobj %> <% }); %></li>
+                </ul>
+            </div>
         </script>
 
 

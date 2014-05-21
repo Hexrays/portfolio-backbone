@@ -1,0 +1,97 @@
+// **************************************************
+// **************************************************
+// Portfolio Pieces
+// **************************************************
+// **************************************************
+
+.folio-header {
+    width : 100%;
+
+    h1 {
+        padding    : 1em;
+        text-align : center;
+        margin     : 0 auto;
+    }
+}
+
+#portfolio-items {
+    width: 100%;
+}
+
+.siteContainer {
+    display: inline-flex;
+    width: 33%;
+    height: 450px;
+    margin: 2em auto auto;
+
+    @include breakpoint(lg){
+        width: 50%;
+    }
+
+    @include breakpoint(sm){
+        width: 100%;
+    }
+
+    &:hover {
+        .site-item {
+            border: 10px solid #8b0000;
+        }
+
+        .img-container {
+            margin-left: -150px;
+            height: 300px;
+            width: 300px;
+        }
+    }
+}
+
+.site-item {
+    box-sizing: border-box;
+
+    position: relative;
+    width: 300px;
+    background: #f0f0f0;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 10px solid black;
+    transition: border 0.3s ease;
+
+    @include breakpoint(xl, min){
+        width: 350px;
+    }
+
+    @include breakpoint(lg){
+        max-width: 400px;
+        width: 90%;
+        min-width: 300px;
+    }
+}
+
+.img-container {
+    @include position-absolute($left:50%, $top:0, $z-index:1);
+    @include size(450px);
+
+    margin-left: -225px;
+    transition: all 0.3s ease;
+
+    // &:hover {
+    //     margin-left: -150px;
+    //     height: 300px;
+    //     width: 300px;
+    // }
+}
+
+img {
+    @include size(100%);
+}
+
+.portfolio-container {
+    position : relative;
+    width    : 100%;
+}
+
+.details {
+    position: absolute;
+    top: 300px;
+}
