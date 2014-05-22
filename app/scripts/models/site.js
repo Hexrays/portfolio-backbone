@@ -11,6 +11,7 @@ app.Site = Backbone.Model.extend({
         description      : 'Unknown',
         responsibilities : 'None',
         image            : 'images/lnksy.png',
+        url              : '#',
         keywords         : []
     }
 });

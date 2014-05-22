@@ -49,12 +49,16 @@
 
             </div>
         </div>
-
         <script id="siteTemplate" type="text/template">
             <div class="site-item">
+                <div class="site-title">
+                    <h1><%= title %></h1>
+                </div>
+                <div class="site-title-box"></div>
+
                 <div class="img-container"><img src="<%= image %>" alt="<%= title %>"></div>
                 <ul class="details">
-                    <li><%= title %></li>
+                    <li><a href="<%= url %>" target="_blank">Launch Project</a></li>
                     <li>Description: <%= description %></li>
                     <li>Responsibilities: <%= responsibilities %></li>
                     <li>Keywords: <% _.each(keywords, function(keyobj) { %> <%= keyobj %> <% }); %></li>
