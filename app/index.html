@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <title>Hexrays.at</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, minimum-scale = 1.0, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <!-- build:css styles/vendor.css -->
@@ -49,19 +49,20 @@
 
             </div>
         </div>
+
         <script id="siteTemplate" type="text/template">
             <div class="site-item">
-                <div class="site-title">
-                    <h1><%= title %></h1>
-                </div>
-                <div class="site-title-box"></div>
+                <!-- // <div class="site-title-box"></div> -->
 
                 <div class="img-container"><img src="<%= image %>" alt="<%= title %>"></div>
                 <ul class="details">
+                    <li class="site-title">
+                        <h1><%= title %></h1>
+                    </li>
                     <li><a href="<%= url %>" target="_blank">Launch Project</a></li>
                     <li>Description: <%= description %></li>
                     <li>Responsibilities: <%= responsibilities %></li>
-                    <li>Keywords: <% _.each(keywords, function(keyobj) { %> <%= keyobj %> <% }); %></li>
+                    <li>Buzzwords: <% _.each(keywords, function(keyobj) { %> <%= keyobj %> <% }); %></li>
                 </ul>
             </div>
         </script>
