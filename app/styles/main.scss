@@ -18,7 +18,11 @@ body {
 }
 
 #main {
-    padding: 58px 0 30px;
+    padding: 48px 0 30px;
+}
+
+em {
+    font-weight: bold;
 }
 
 @import "nav";

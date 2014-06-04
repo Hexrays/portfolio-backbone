@@ -6,7 +6,7 @@
 
 .site-header {
     @include position-fixed($top:0, $left:0, $z-index:100);
-    @include size(100%, auto);
+    @include size(100%, 48px);
 
     background : $mainTheme;
 

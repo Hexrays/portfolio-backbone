@@ -59,10 +59,10 @@
                     <li class="site-title">
                         <h1><%= title %></h1>
                     </li>
-                    <li><a href="<%= url %>" target="_blank">Launch Project</a></li>
-                    <li>Description: <%= description %></li>
-                    <li>Responsibilities: <%= responsibilities %></li>
-                    <li>Buzzwords: <% _.each(keywords, function(keyobj) { %> <%= keyobj %> <% }); %></li>
+                    <li class="site-detail"><a href="<%= url %>" target="_blank">Launch Project</a></li>
+                    <li class="site-detail"><em>Description:</em> <%= description %></li>
+                    <li class="site-detail"><em>Responsibilities:</em> <%= responsibilities %></li>
+                    <li class="site-detail"><em>Buzzwords:</em> <% _.each(keywords, function(keyobj) { %> <%= keyobj %> <% }); %></li>
                 </ul>
             </div>
         </script>
