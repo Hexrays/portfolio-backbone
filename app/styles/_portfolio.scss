@@ -35,9 +35,53 @@
     // }
 }
 
+//////////////
+/* Flipper */
+//////////////
+
+/* entire container, keeps perspective */
+
+.flip-container {
+    perspective: 1000;
+
+    /* flip the pane when hovered */
+    &:hover .flipper,
+    &.active .flipper {
+        transform: rotateY(180deg);
+    }
+}
+
+/* flip speed goes here */
+.flipper {
+    position        : relative;
+    transition      : 0.6s;
+    transform-style : preserve-3d;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+    @include position-absolute($top:0, $left:0);
+    @include size(100%, 440px);
+
+    max-width           : 675px;
+    backface-visibility : hidden;
+}
+
+/* front pane, placed above back */
+.front {
+    z-index : 2;
+}
+
+/* back, initially hidden pane */
+.back {
+    background-color : #fff;
+    transform        : rotateY(180deg);
+}
+
+
 .site-item {
-    position   : relative;
-    overflow   : hidden;
+    // position   : relative;
+    // overflow   : hidden;
     box-sizing : border-box;
     margin     : 0 auto;
     max-width  : 675px;
@@ -47,18 +91,18 @@
     background : #f0f0f0;
     transition : border 0.3s ease;
 
-    .no-touch &:hover, .touch .active & {
-        .site-item {
-            // border : 10px solid #8b0000;
-        }
+    // .no-touch &:hover, .touch .active & {
+    //     .site-item {
+    //         // border : 10px solid #8b0000;
+    //     }
 
-        .img-container {
-            @include size(300px, 200px);
+    //     .img-container {
+    //         @include size(300px, 200px);
 
-            // left: 0;
-            margin-left: -150px;
-        }
-    }
+    //         // left: 0;
+    //         margin-left: -150px;
+    //     }
+    // }
 
     @include breakpoint(xl, min){
         // width : 350px;
