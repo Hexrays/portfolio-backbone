@@ -9,70 +9,62 @@
 
     h1 {
         margin      : 0 auto;
-        padding     : 0.75em 0 0;
+        padding     : 1rem 0;
         text-align  : center;
         font-weight : bold;
-        font-size   : 2em;
+        font-size   : 2rem;
     }
 }
 
 #portfolio-items {
-    width: 100%;
+    width : 100%;
 }
 
 .siteContainer {
     display : inline-flex;
-    margin  : 3em auto auto;
+    margin  : 0 auto 3rem;
     width   : 100%;
     height  : 450px;
-
-    // @include breakpoint(lg){
-    //     width : 50%;
-    // }
-
-    // @include breakpoint(sm){
-    //     width : 100%;
-    // }
 }
 
-//////////////
-/* Flipper */
-//////////////
+// ********************
+//  Flipper
+// ********************
 
-/* entire container, keeps perspective */
-
+// entire container, keeps perspective
 .flip-container {
-    perspective: 1000;
+    perspective : 1000;
 
-    /* flip the pane when hovered */
-    &:hover .flipper,
-    &.active .flipper {
-        transform: rotateY(180deg);
+    // flip the pane when hovered
+    &:hover .flipper {
+        transform : rotateY(180deg);
     }
 }
 
-/* flip speed goes here */
+// flip speed goes here
 .flipper {
     position        : relative;
     transition      : 0.6s;
     transform-style : preserve-3d;
 }
 
-/* hide back of pane during swap */
+// hide back of pane during swap
 .front, .back {
     @include position-absolute($top:0, $left:0);
     @include size(100%, 440px);
 
+    overflow            : hidden;
     max-width           : 675px;
     backface-visibility : hidden;
 }
 
-/* front pane, placed above back */
+// front pane, placed above back
 .front {
-    z-index : 2;
+    z-index  : 2;
+    overflow : hidden;
 }
 
-/* back, initially hidden pane */
+// back, initially hidden pane
 .back {
     background-color : #fff;
     transform        : rotateY(180deg);
@@ -80,8 +72,6 @@
 
 
 .site-item {
-    // position   : relative;
-    // overflow   : hidden;
     box-sizing : border-box;
     margin     : 0 auto;
     max-width  : 675px;
@@ -90,62 +80,15 @@
     border     : 5px solid black;
     background : #f0f0f0;
     transition : border 0.3s ease;
-
-    // .no-touch &:hover, .touch .active & {
-    //     .site-item {
-    //         // border : 10px solid #8b0000;
-    //     }
-
-    //     .img-container {
-    //         @include size(300px, 200px);
-
-    //         // left: 0;
-    //         margin-left: -150px;
-    //     }
-    // }
-
-    @include breakpoint(xl, min){
-        // width : 350px;
-    }
-
-    @include breakpoint(lg){
-        // min-width : 300px;
-        width     : 80%;
-    }
-
-    @include breakpoint(sm){
-        width: 90%;
-    }
-}
-
-
-.site-title {
-
-    h1 {
-        padding-left : 15px;
-        color        : #000;
-        font-weight  : bold;
-        font-size    : 1.25em;
-        line-height  : 50px;
-    }
-}
-
-.site-detail {
-    padding     : 0.25em;
-    line-height : 1.10;
 }
 
 .img-container {
-    @include position-absolute($left:50%, $top:0, $z-index:1);
-    @include size(675px, 450px);
+    @include position-absolute($left:50%);
+    @include size(667px, 440px);
 
-    margin-left : -338px;
-    transition  : all 0.3s ease;
-    background-color: #f0f0f0;
-}
-
-img {
-    @include size(100%);
+    margin-left      : -333px;
+    transition       : all 0.3s ease;
+    background-color : #f0f0f0;
 }
 
 .portfolio-container {
@@ -155,5 +98,42 @@ img {
 
 .details {
     position : absolute;
-    top      : 200px;
+    padding  : 3rem;
+
+    @include breakpoint(sm){
+        padding : 2rem;
+    }
+
+    @include breakpoint(xs){
+        padding : 1.5rem;
+    }
+}
+
+.site-title {
+    h1 {
+        color        : #000;
+        font-weight  : bold;
+        font-size    : 1.25rem;
+        line-height  : 50px;
+
+        @include breakpoint(sm){
+            line-height: 1.5;
+        }
+    }
+}
+
+.site-detail {
+    padding-bottom : .5rem;
+    line-height    : 1.10;
+
+    @include breakpoint(sm){
+        line-height : 1.25;
+        font-size : 0.95rem;
+    }
+
+    a {
+        color           : red;
+        text-decoration : none;
+        font-weight     : bold;
+    }
 }
