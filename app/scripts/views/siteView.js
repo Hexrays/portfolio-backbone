@@ -18,10 +18,12 @@ app.SiteView = Backbone.View.extend({
     },
 
     onItemTap: function(){
-        if(!this.$el.hasClass('active')){
-            this.$el.addClass('active').siblings().removeClass('active');
-        } else {
-            this.$el.removeClass('active');
+        if(Modernizr.touch){
+            if(!this.$el.hasClass('active')){
+                this.$el.addClass('active').siblings().removeClass('active');
+            } else {
+                this.$el.removeClass('active');
+            }
         }
     }
 });
