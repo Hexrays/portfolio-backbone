@@ -3,6 +3,7 @@
 var app = app || {};
 
 app.FolioRouter = Backbone.Router.extend({
+    $pages: $('.page'),
 
     routes: {
         ''              : 'index',
@@ -13,15 +14,16 @@ app.FolioRouter = Backbone.Router.extend({
 
     initialize: function(){
         Backbone.history.start({ pushState: false });
+        // this.$pages = $('.page');
     },
 
     showPage: function(page) {
         this.hidePages();
-        $(page).show();
+        $(page).show().css('opacity', 1);
     },
 
     hidePages: function() {
-        $('.page').hide();
+        this.$pages.hide().css('opacity', 0);
     },
 
     index: function(){
@@ -34,7 +36,6 @@ app.FolioRouter = Backbone.Router.extend({
 
     showPortfolio: function(){
         this.showPage('#portfolio');
-        new app.PortfolioView(app.siteData);
     },
 
     // filterPortfolio: function(id){
