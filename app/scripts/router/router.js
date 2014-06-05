@@ -7,8 +7,8 @@ app.FolioRouter = Backbone.Router.extend({
     routes: {
         ''              : 'index',
         'about'         : 'showAbout',
-        'portfolio'     : 'showPortfolio',
-        'portfolio/:id' : 'filterPortfolio'
+        'portfolio'     : 'showPortfolio'
+        // 'portfolio/:id' : 'filterPortfolio'
     },
 
     initialize: function(){
@@ -37,8 +37,9 @@ app.FolioRouter = Backbone.Router.extend({
         new app.PortfolioView(app.siteData);
     },
 
-    filterPortfolio: function(id){
+    // filterPortfolio: function(id){
+        // this.showPage('#portfolio');
         // this.navigate('portfolio/' + id, {trigger: true} );
-    }
+    // }
 
 });
