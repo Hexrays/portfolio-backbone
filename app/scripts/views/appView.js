@@ -15,7 +15,7 @@ app.AppView = Backbone.View.extend({
     },
 
     initialize: function(){
-        this.router = new app.Workspace();
+        this.router = new app.FolioRouter();
         console.log(this.router);
     },
 

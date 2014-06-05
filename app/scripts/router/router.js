@@ -2,7 +2,7 @@
 
 var app = app || {};
 
-app.Workspace = Backbone.Router.extend({
+app.FolioRouter = Backbone.Router.extend({
 
     routes: {
         ''              : 'index',
