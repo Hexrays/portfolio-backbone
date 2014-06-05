@@ -4,11 +4,12 @@
 // **************************************************
 // **************************************************
 
-.site-header {
+#site-header {
     @include position-fixed($top:0, $left:0, $z-index:100);
     @include size(100%, 48px);
 
     background : $mainTheme;
+    font-size  : 1rem;
 
     a {
         color           : $thisBlue;
@@ -71,6 +72,7 @@ nav[role=navigation] {
             margin : 0;
             width  : 100%;
             border-top : 1px solid #202020;
+            background: $mainTheme;
         }
     }
 

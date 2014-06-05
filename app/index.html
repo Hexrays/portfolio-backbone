@@ -24,21 +24,25 @@
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <header class="site-header">
+        <header id="site-header">
             <h1 class="name">
-                <a href="/">Jeff Denton</a>
+                <a class="home-link">Jeff Denton</a>
             </h1>
             <a href="#menu" class="menu-link">Menu</a>
             <nav id="menu" role="navigation">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="#" class="nav-link">Portfolio</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    <li class="nav-item portfolio-link"><a class="nav-link">Portfolio</a></li>
+                    <li class="nav-item about-link"><a class="nav-link">About</a></li>
                 </ul>
             </nav>
         </header>
 
         <div id="main">
-            <div id="portfolio">
+            <div id="home" class="page">
+                <h1>Hi. I'm Jeff.</h1>
+                <h2>This is my site.</h2>
+            </div>
+            <div id="portfolio" class="page">
                 <header class="folio-header">
                     <h1>Portfolio</h1>
                 </header>
@@ -48,13 +52,18 @@
                 </div>
 
             </div>
+            <div id="about" class="page">
+                <h1>Don't forget about me!</h1>
+            </div>
         </div>
-
         <script id="siteTemplate" type="text/template">
             <div class="site-item flip-container">
                 <!-- // <div class="site-title-box"></div> -->
                 <div class="flipper">
-                    <div class="img-container front"><img src="<%= image %>" alt="<%= title %>"></div>
+                    <div class="front">
+                        <div class="img-container"><img src="<%= image %>" alt="<%= title %>"></div>
+                    </div>
+
                     <div class="back">
                         <ul class="details">
                             <li class="site-title">
@@ -95,6 +104,8 @@
         <script src="scripts/collections/portfolio.js"></script>
         <script src="scripts/views/portfolioView.js"></script>
         <script src="scripts/views/siteView.js"></script>
+        <script src="scripts/router/router.js"></script>
+        <script src="scripts/views/appView.js"></script>
         <script src="scripts/app.js"></script>
         <!-- endbuild -->
 </body>
