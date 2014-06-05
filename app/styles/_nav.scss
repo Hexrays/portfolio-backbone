@@ -12,11 +12,12 @@
     font-size  : 1rem;
 
     a {
-        color           : $thisBlue;
+        color           : whiteSmoke;
         text-decoration : none;
+        transition      : color 0.2s ease;
 
-        &:hover {
-            text-decoration : underline;
+        &:hover{
+            color : $mainLink;
         }
     }
 
@@ -49,7 +50,7 @@
 nav[role=navigation] {
     overflow   : hidden;
     max-height : none;
-    transition : all 0.4s ease-out;
+    transition : all 0.4s ease-in-out;
 
     &.active {
         max-height : 15em;
@@ -68,11 +69,11 @@ nav[role=navigation] {
         padding    : 0;
 
         @include breakpoint(xs){
-            bottom : auto;
-            margin : 0;
-            width  : 100%;
+            bottom     : auto;
+            margin     : 0;
+            width      : 100%;
             border-top : 1px solid #202020;
-            background: $mainTheme;
+            background : $mainTheme;
         }
     }
 

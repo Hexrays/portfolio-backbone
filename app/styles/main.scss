@@ -8,7 +8,7 @@
 html, body {
     @include size(100%);
 
-    background  : #fafafa;
+    background  : $bkgColor;
     color       : #333;
     font-size   : 1rem;
     font-family : "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -19,7 +19,14 @@ body {
 }
 
 #main {
-    padding : 48px 0 30px;
+    box-sizing : border-box;
+    padding    : 48px 0 0;
+    height     : 100%;
+}
+
+.page {
+    display : none;
+    height  : 100%;
 }
 
 img {
@@ -30,9 +37,17 @@ em {
     font-weight : bold;
 }
 
-.page {
-    display: none;
+a {
+    color           : $mainLink;
+    text-decoration : none;
+    transition      : color 0.2s ease;
+
+    &:hover{
+        color : rosybrown;
+    }
 }
 
 @import "nav";
+@import "home";
 @import "portfolio";
+@import "about";
