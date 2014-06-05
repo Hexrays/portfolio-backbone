@@ -1,0 +1,50 @@
+// **************************************************
+// **************************************************
+// About
+// **************************************************
+// **************************************************
+
+#about {
+    display         : flex;
+    margin-top      : -48px;
+    justify-content : center;
+    align-content   : center;
+
+    @include breakpoint(xs){
+        margin-top : 0;
+    }
+}
+
+.about-content {
+    margin     : auto;
+    max-width  : 600px;
+    width      : 80%;
+    align-self : center;
+
+    @include breakpoint(xs){
+        min-width : 270px;
+    }
+}
+
+.about-header {
+    font-size: 2rem;
+    color: $mainLink;
+    font-weight: bold;
+}
+
+.about-message, .about-links {
+    line-height: 1.3;
+    padding-top: 0.75rem;
+}
+
+.about-message {
+    color: $offBlack;
+}
+
+.about-item {
+    color: $grey;
+    display: inline;
+    padding-right: 0.25em;
+    // width: 24%;
+    // text-align: center;
+}
