@@ -8,7 +8,8 @@ app.SiteView = Backbone.View.extend({
     template: _.template( $('#siteTemplate').html() ),
 
     events: {
-        'click .site-item' : 'onItemTap'
+        'click .site-item' : 'onItemTap',
+        // 'click .buzzword'  : 'onBuzzwordClick'
     },
 
     render: function(){
@@ -25,5 +26,10 @@ app.SiteView = Backbone.View.extend({
                 this.$el.removeClass('active');
             }
         }
-    }
+    },
+
+    // onBuzzwordClick: function(){
+    //     console.log(this.model.collection.filterByKeyword('SVG'));
+    //     // console.log(app.Portfolio);
+    // }
 });
