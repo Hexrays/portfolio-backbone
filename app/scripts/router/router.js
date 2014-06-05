@@ -26,7 +26,6 @@ app.FolioRouter = Backbone.Router.extend({
 
     index: function(){
         this.showPage('#home');
-        console.log('index');
     },
 
     showAbout: function(){
@@ -36,7 +35,6 @@ app.FolioRouter = Backbone.Router.extend({
     showPortfolio: function(){
         this.showPage('#portfolio');
         new app.PortfolioView(app.siteData);
-        console.log('farts');
     },
 
     filterPortfolio: function(id){
