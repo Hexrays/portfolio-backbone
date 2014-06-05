@@ -11,7 +11,8 @@ app.AppView = Backbone.View.extend({
         'click .home-link'      : 'displayHome',
         'click .portfolio-link' : 'displayPortfolio',
         'click .about-link'     : 'displayAbout',
-        'click .menu-link'      : 'showMenu',
+        'click .menu-link'      : 'activateMenu',
+        'click .nav-item'       : 'activateMenu'
     },
 
     initialize: function(){
@@ -33,7 +34,7 @@ app.AppView = Backbone.View.extend({
         return false;
     },
 
-    showMenu: function() {
+    activateMenu: function() {
         this.$menuLink.toggleClass('active');
         this.$menu.toggleClass('active');
         return false;
