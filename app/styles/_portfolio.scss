@@ -36,7 +36,7 @@
     perspective : 1000;
 
     // flip the pane when hovered
-    &:hover .flipper {
+    .no-touch &:hover .flipper, .touch .active & .flipper {
         transform : rotateY(180deg);
     }
 }
