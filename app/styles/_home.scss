@@ -6,11 +6,9 @@
 
 #home {
     display                    : flex;
-    overflow                   : scroll;
     background                 : $mainLink;
     justify-content            : center;
     align-content              : center;
-    -webkit-overflow-scrolling : touch;
 
     @include breakpoint(xs){
         margin-top : 0;
@@ -22,7 +20,6 @@
     max-width  : 630px;
     width      : 80%;
     align-self : center;
-    // transition : width 0.5s ease;
 
     @include breakpoint(xs){
         width : 270px;
@@ -41,7 +38,6 @@
 //         color       : $mainLink;
 //         font-weight : bold;
 //     }
-
 // }
 
 .home-subheader {
@@ -55,9 +51,8 @@
     transition     : font-size 0.25s ease;
 
     @include breakpoint(xs){
-        letter-spacing : .05rem;
         font-size      : 2.5em;
-        line-height: 3.4rem;
+        line-height    : 2.75rem;
     }
 }
 
