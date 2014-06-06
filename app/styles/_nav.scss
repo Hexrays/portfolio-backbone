@@ -8,19 +8,9 @@
     @include position-fixed($top:0, $left:0, $z-index:100);
     @include size(100%, 48px);
 
-    background     : $mainTheme;
-    letter-spacing : 0.3rem;
-    font-size      : 1rem;
-
-    a {
-        color           : whiteSmoke;
-        text-decoration : none;
-        transition      : color 0.2s ease;
-
-        &:hover{
-            color : $mainLink;
-        }
-    }
+    background  : $mainTheme;
+    font-size   : 1rem;
+    font-family : $mainHeader;
 
     @include breakpoint(lg) {
         // @include size(100%, auto);
@@ -30,13 +20,30 @@
     }
 }
 
+.menu-link, .nav-link, .nav-link-home {
+    color           : whiteSmoke;
+    text-decoration : none;
+    text-transform  : uppercase;
+    transition      : color 0.2s ease;
+    letter-spacing  : 0.2rem;
+
+    &:hover{
+        color : $mainLink;
+    }
+}
+
 .name {
-    z-index     : 100;
-    float       : left;
-    padding     : 1em;
-    font-weight : normal;
-    font-size   : 1em;
-    text-transform: uppercase;
+    z-index        : 100;
+    float          : left;
+    padding-left   : 1em;
+    text-transform : uppercase;
+    font-weight    : normal;
+    font-size      : 1.25em;
+    line-height    : 48px;
+}
+
+.nav-link-home {
+    letter-spacing : 0.3rem;
 }
 
 .menu-link {

@@ -59,6 +59,23 @@
     @include position($left, $top, $z-index, $right, $bottom);
 }
 
+@mixin background-gradient($from, $to, $dir:null) {
+    background-color: $from;
+    @if $dir != null {
+        background-image:
+        linear-gradient(
+            $dir,
+            $from, $to
+        );
+    } @else {
+        background-image:
+        linear-gradient(
+            $from, $to
+        );
+    }
+
+}
+
 %position-absolute-center {
     @include position-absolute($left:0, $top:0, $right:0, $bottom:0);
     margin: auto;

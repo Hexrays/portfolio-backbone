@@ -27,22 +27,24 @@
 }
 
 .about-header {
-    font-size: 2rem;
-    color: $mainLink;
-    font-weight: bold;
+    color          : $mainLink;
+    text-transform : uppercase;
+    font-weight    : bold;
+    font-size      : 2rem;
+    font-family    : $mainHeader;
 }
 
 .about-message, .about-links {
-    line-height: 1.3;
-    padding-top: 0.75rem;
+    padding-top : 0.75rem;
+    line-height : 1.3;
 }
 
 .about-message {
-    color: $offBlack;
+    color : $offBlack;
 }
 
 .about-item {
-    color: $grey;
-    display: inline;
-    padding-right: 0.25em;
+    display       : inline;
+    padding-right : 0.25em;
+    color         : $grey;
 }

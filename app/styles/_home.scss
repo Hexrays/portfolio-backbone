@@ -6,7 +6,7 @@
 
 #home {
     display         : flex;
-    margin-top      : -48px;
+    background      : $mainLink;
     justify-content : center;
     align-content   : center;
 
@@ -17,7 +17,8 @@
 
 .home-content {
     margin     : auto;
-    width      : 480px;
+    max-width  : 630px;
+    width      : 80%;
     align-self : center;
     // transition : width 0.5s ease;
 
@@ -42,8 +43,13 @@
 }
 
 .home-subheader {
+    color          : #fff;
+    text-align     : center;
+    text-transform : uppercase;
     letter-spacing : .02rem;
     font-size      : 4.65rem;
+    font-family    : $mainHeader;
+    line-height    : 5.5rem;
     transition     : font-size 0.25s ease;
 
     @include breakpoint(xs){
@@ -51,6 +57,18 @@
         font-size      : 2.5em;
     }
 }
+
+.home-link {
+    color       : #000;
+    // text-shadow : 0 0 5px #fff;
+    transition: color 0.25s ease;
+
+    .no-touch &:hover {
+        color: #fff;
+        // text-shadow: 0 0 20px #fff;
+    }
+}
+
 
 .home-items {
     @include breakpoint(xs){

@@ -19,6 +19,16 @@
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
+
+        <script type="text/javascript">
+          (function(d) {
+            var config = {
+              kitId: 'guv2sym',
+              scriptTimeout: 3000
+            },
+            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+          })(document);
+        </script>
     </head>
     <body>
         <!--[if lt IE 10]>
@@ -26,7 +36,7 @@
         <![endif]-->
         <header id="site-header">
             <h1 class="name">
-                <a class="home-link">Hexrays</a>
+                <a class="nav-link-home">Hexrays</a>
             </h1>
             <a href="#menu" class="menu-link">Menu</a>
             <nav id="menu" role="navigation">
@@ -40,20 +50,14 @@
         <div id="main">
             <div id="home" class="page">
                 <div class="home-content">
-                    <h2 class="home-subheader">Hi,</h2>
-                    <h1 class="home-header">I'm <em>Jeff</em>.</h1>
-                    <h2 class="home-subheader">this is my site.</h2>
-                    <ul class="home-items">
-                        <li class="home-item"><a class="home-link" href="#portfolio">check out some stuff I've worked on.</a></li>
-                        <li class="home-item"><a class="home-link" href="#about">read about me.</a></li>
-                    </ul>
+                    <h2 class="home-subheader">Hi, I'm <em>Jeff</em>.</h2>
+                    <h2 class="home-subheader">I make websites.</h2>
+                    <h2 class="home-subheader">This is my site.</h2>
+                    <h2 class="home-subheader">You can check out some of them <a class="home-link" href="#portfolio">here</a>.</h2>
                 </div>
             </div>
 
             <div id="portfolio" class="page">
-<!--                 <header class="folio-header">
-                    <h1>Portfolio</h1>
-                </header> -->
 
                 <div class="portfolio-container">
                     <ul id="portfolio-items"></ul>
@@ -87,14 +91,20 @@
                             <li class="site-title">
                                 <h1><%= title %></h1>
                             </li>
-                            <li class="site-detail"><em>Description:</em> <%= description %></li>
-                            <li class="site-detail"><em>Responsibilities:</em> <%= responsibilities %></li>
-                            <li class="site-detail"><a href="<%= url %>" target="_blank">Launch Project</a></li>
+                            <li class="site-detail"><a class="site-url" href="<%= url %>" target="_blank"><span>&rarr;</span> View Live Site</a></li>
+                            <li class="site-detail"><%= description %> <%= responsibilities %></li>
+                            <% if (company === 'Hexrays') { %>
+                                <li class="site-detail site-company">made by Hexrays || <%= year %></li>
+                            <% } else { %>
+                                <li class="site-detail site-company">created at <%= company %> || <%= year %></li>
+                            <% }  %>
                         </ul>
                     </div>
                 </div>
             </div>
         </script>
+                            <!-- <li class="site-detail"><em>Description:</em> <%= description %></li> -->
+                            <!-- <li class="site-detail"><em>Responsibilities:</em> <%= responsibilities %></li> -->
 
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

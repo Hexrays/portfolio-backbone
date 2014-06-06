@@ -1,3 +1,7 @@
+// **************************************************
+// Colors
+// **************************************************
+
 // Choose one of these to be your mainTheme color
 $green  : hsl(151, 65%, 60%);
 $blue   : hsl(216, 65%, 60%); // #850D1B
@@ -14,7 +18,7 @@ $sublLtBrown  : #bfa869;
 $sublGreen    : #8f9d6a;
 $sublRed      : #9a614b;
 
-$mainLink : #e86345;
+$mainLink : #e54c2f;
 // $mainLink : #c72d32;
 $bkgColor : #fafafa;
 $cardBkg  : #f0f0f0;
@@ -25,3 +29,26 @@ $grey     : lighten($offBlack, 45);
 $mainTheme      : $sublimeBlack;
 $baseTextColor  : $offBlack;
 $lightTextColor : $grey;
+
+$lnksyColTop        : #36c4ac;
+$lnksyColBottom     : #00c1ec;
+$ttuiColTop         : #00a3d6;
+$ttuiColBottom      : #3447d4;
+$hmieColTop         : #fbc902;
+$hmieColBottom      : #2b5114;
+$boatColTop         : #72eca5;
+$boatColBottom      : #aa9958;
+$stripeColTop       : #90c1a5;
+$stripeColBottom    : #ece96a;
+$wpfpColTop         : #a9988e;
+$wpfpColBottom      : #d17d1d;
+$halloweenColTop    : #eb9448;
+$halloweenColBottom : #dd4247;
+
+
+// **************************************************
+// Fonts
+// **************************************************
+
+$mainHeader: "din-condensed-web", sans-serif;
+$mainBody: "soleil",sans-serif;

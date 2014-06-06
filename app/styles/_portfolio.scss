@@ -84,37 +84,37 @@
     width      : 90%;
     height     : 100%;
     border     : 5px solid $offBlack;
-    background : $mainLink;
-    // background : $cardBkg;
+    background : $cardBkg;
     transition : border 0.3s ease;
 
     &.lnksy {
-        background : #00c1ec;
+        background : lighten(desaturate($lnksyColTop,20%), 25%);
     }
 
     &.ttui {
-        background : #0088b5;
+        background : lighten(desaturate($ttuiColTop,20%), 25%);
     }
 
     &.hmie {
-        background : #fbc902;
+        background : lighten(desaturate($hmieColTop,20%), 25%);
     }
 
     &.boat {
-        background : #72eca5;
+        background : lighten(desaturate($boatColTop,20%), 25%);
     }
 
     &.stripe {
-        background : #90c1a5;
+        background : lighten(desaturate($stripeColTop,20%), 25%);
     }
 
     &.wpfp {
-        background : #dad3c1;
+        background : lighten(desaturate($wpfpColTop,20%), 25%);
     }
 
     &.halloween {
-        background : #eb9448;
+        background : lighten(desaturate($halloweenColTop,20%), 25%);
     }
+
 }
 
 .img-container {
@@ -127,8 +127,46 @@
 }
 
 .details {
-    position : absolute;
-    padding  : 3rem;
+    position   : absolute;
+    box-sizing : border-box;
+    padding    : 3rem;
+    height     : 100%;
+    color      : #fff;
+
+    .lnksy & {
+        // background : $lnksyColTop;
+        @include background-gradient($lnksyColTop, $lnksyColBottom);
+    }
+
+    .ttui & {
+        // background : $ttuiColTop;
+        @include background-gradient($ttuiColTop, $ttuiColBottom, to bottom right);
+    }
+
+    .hmie & {
+        // background : $hmieColTop;
+        @include background-gradient($hmieColTop, $hmieColBottom, to bottom left);
+    }
+
+    .boat & {
+        // background : $boatColTop;
+        @include background-gradient($boatColTop, $boatColBottom);
+    }
+
+    .stripe & {
+        // background : $stripeColTop;
+        @include background-gradient($stripeColTop, $stripeColBottom);
+    }
+
+    .wpfp & {
+        // background : $wpfpColTop;
+        @include background-gradient($wpfpColTop, $wpfpColBottom);
+    }
+
+    .halloween & {
+        // background : $halloweenColTop;
+        @include background-gradient($halloweenColTop, $halloweenColBottom);
+    }
 
     @include breakpoint(sm){
         padding : 2rem;
@@ -141,10 +179,12 @@
 
 .site-title {
     h1 {
-        color        : #000;
-        font-weight  : bold;
-        font-size    : 1.25rem;
-        line-height  : 50px;
+        text-align     : center;
+        text-transform : uppercase;
+        font-weight    : bold;
+        font-size      : 3rem;
+        font-family    : $mainHeader;
+        line-height    : 50px;
 
         @include breakpoint(sm){
             font-size   : 1.15rem;
@@ -154,19 +194,55 @@
 }
 
 .site-detail {
-    padding-bottom : .5rem;
-    line-height    : 1.10;
+    padding-bottom : 0.5rem;
+    text-align     : center;
+    letter-spacing : 0.025rem;
+    font-weight    : 300;
+    line-height    : 1.5;
 
-    // em {
-    //     display: none;
-    // }
-
-    a {
-        font-weight     : bold;
+    em {
+        display: none;
     }
+
+    // a {
+    //     font-weight     : bold;
+    // }
 
     @include breakpoint(sm){
         line-height : 1.25;
         font-size : 0.95rem;
     }
+}
+
+.site-url {
+    @include size(175px,40px);
+
+    display          : block;
+    margin           : 1rem auto;
+    border           : 2px solid white;
+    background-color : rgba(255,255,255,0);
+    color            : #fff;
+    text-align       : center;
+    text-transform   : uppercase;
+    line-height      : 40px;
+    transition       : background-color 0.25s ease;
+
+    // span {
+    //     position : relative;
+    //     top      : -2px;
+    // }
+
+    &:hover{
+        color : #fff;
+        background-color: rgba(255,255,255,0.35);
+    }
+
+}
+
+.site-inline {
+    display: inline;
+}
+
+.site-company {
+    margin-top: 1rem;
 }
