@@ -24,10 +24,11 @@
     color           : whiteSmoke;
     text-decoration : none;
     text-transform  : uppercase;
-    transition      : color 0.2s ease;
     letter-spacing  : 0.2rem;
+    cursor          : pointer;
+    transition      : color 0.2s ease;
 
-    &:hover{
+    .no-touch &:hover {
         color : $mainLink;
     }
 }
@@ -102,6 +103,10 @@ nav[role=navigation] {
             padding        : 1em;
             border         : 0;
             // text-transform : capitalize;
+
+            .active & {
+                color: $mainLink;
+            }
 
             @include breakpoint(xs){
                 padding       : 0.8em;

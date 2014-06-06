@@ -12,7 +12,7 @@ app.AppView = Backbone.View.extend({
     },
 
     events    : {
-        'click .home-link'      : 'displayHome',
+        'click .nav-link-home'  : 'displayHome',
         'click .portfolio-link' : 'displayPortfolio',
         'click .about-link'     : 'displayAbout',
         'click .menu-link'      : 'activateMenu',

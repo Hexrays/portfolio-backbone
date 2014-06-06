@@ -59,12 +59,12 @@
 }
 
 .home-link {
-    color       : #000;
+    color       : #fff;
     // text-shadow : 0 0 5px #fff;
     transition: color 0.25s ease;
 
     .no-touch &:hover {
-        color: #fff;
+        color: #000;
         // text-shadow: 0 0 20px #fff;
     }
 }
