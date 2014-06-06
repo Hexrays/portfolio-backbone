@@ -42,13 +42,13 @@ app.AppView = Backbone.View.extend({
     },
 
     activateMenu: function() {
-        this.$menuLink.toggleClass('active');
-        this.$menu.toggleClass('active');
+        this.$menuLink.toggleClass('open');
+        this.$menu.toggleClass('open');
         return false;
     },
 
     hideMenu: function(){
-        if(this.$menu.hasClass('active')){
+        if(this.$menu.hasClass('open')){
             this.activateMenu();
         }
     }

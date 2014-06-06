@@ -45,7 +45,7 @@ a {
     text-decoration : none;
     transition      : color 0.2s ease;
 
-    &:hover{
+    .no-touch &:hover{
         color : rosybrown;
     }
 }

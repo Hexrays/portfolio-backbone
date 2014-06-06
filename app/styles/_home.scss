@@ -5,10 +5,12 @@
 // **************************************************
 
 #home {
-    display         : flex;
-    background      : $mainLink;
-    justify-content : center;
-    align-content   : center;
+    display                    : flex;
+    overflow                   : scroll;
+    background                 : $mainLink;
+    justify-content            : center;
+    align-content              : center;
+    -webkit-overflow-scrolling : touch;
 
     @include breakpoint(xs){
         margin-top : 0;
@@ -27,20 +29,20 @@
     }
 }
 
-.home-header {
-    font-size  : 8rem;
-    transition : font-size 0.25s ease;
+// .home-header {
+//     font-size  : 8rem;
+//     transition : font-size 0.25s ease;
 
-    @include breakpoint(xs){
-        font-size : 4.5rem;
-    }
+//     @include breakpoint(xs){
+//         font-size : 4.5rem;
+//     }
 
-    em {
-        color       : $mainLink;
-        font-weight : bold;
-    }
+//     em {
+//         color       : $mainLink;
+//         font-weight : bold;
+//     }
 
-}
+// }
 
 .home-subheader {
     color          : #fff;
@@ -55,17 +57,16 @@
     @include breakpoint(xs){
         letter-spacing : .05rem;
         font-size      : 2.5em;
+        line-height: 3.4rem;
     }
 }
 
 .home-link {
-    color       : #fff;
-    // text-shadow : 0 0 5px #fff;
-    transition: color 0.25s ease;
+    color      : #fff;
+    transition : color 0.25s ease;
 
     .no-touch &:hover {
-        color: #000;
-        // text-shadow: 0 0 20px #fff;
+        color : #000;
     }
 }
 

@@ -62,7 +62,7 @@ nav[role=navigation] {
     max-height : none;
     transition : all 0.4s ease-in-out;
 
-    &.active {
+    &.open {
         max-height : 15em;
     }
 

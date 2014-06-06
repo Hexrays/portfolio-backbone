@@ -20,15 +20,8 @@
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
 
-        <script type="text/javascript">
-          (function(d) {
-            var config = {
-              kitId: 'guv2sym',
-              scriptTimeout: 3000
-            },
-            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-          })(document);
-        </script>
+        <script type="text/javascript" src="//use.typekit.net/guv2sym.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     </head>
     <body>
         <!--[if lt IE 10]>
@@ -53,7 +46,7 @@
                     <h2 class="home-subheader">Hi, I'm <em>Jeff</em>.</h2>
                     <h2 class="home-subheader">I make websites.</h2>
                     <h2 class="home-subheader">This is my site.</h2>
-                    <h2 class="home-subheader">You can check out some of them <a class="home-link" href="#portfolio">here</a>.</h2>
+                    <h2 class="home-subheader">You can check out some other stuff I've worked on <a class="home-link" href="#portfolio">here</a>.</h2>
                 </div>
             </div>
 

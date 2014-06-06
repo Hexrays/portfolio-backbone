@@ -4,18 +4,6 @@
 // **************************************************
 // **************************************************
 
-// .folio-header {
-//     width : 100%;
-
-//     h1 {
-//         margin      : 0 auto;
-//         padding     : 1rem 0;
-//         text-align  : center;
-//         font-weight : bold;
-//         font-size   : 2rem;
-//     }
-// }
-
 .portfolio-container {
     position    : relative;
     padding-top : 3rem;
@@ -134,37 +122,30 @@
     color      : #fff;
 
     .lnksy & {
-        // background : $lnksyColTop;
         @include background-gradient($lnksyColTop, $lnksyColBottom);
     }
 
     .ttui & {
-        // background : $ttuiColTop;
         @include background-gradient($ttuiColTop, $ttuiColBottom, to bottom right);
     }
 
     .hmie & {
-        // background : $hmieColTop;
         @include background-gradient($hmieColTop, $hmieColBottom, to bottom left);
     }
 
     .boat & {
-        // background : $boatColTop;
-        @include background-gradient($boatColTop, $boatColBottom);
+        @include background-gradient($boatColTop, $boatColBottom, to top);
     }
 
     .stripe & {
-        // background : $stripeColTop;
         @include background-gradient($stripeColTop, $stripeColBottom);
     }
 
     .wpfp & {
-        // background : $wpfpColTop;
         @include background-gradient($wpfpColTop, $wpfpColBottom);
     }
 
     .halloween & {
-        // background : $halloweenColTop;
         @include background-gradient($halloweenColTop, $halloweenColBottom);
     }
 
@@ -194,7 +175,7 @@
 }
 
 .site-detail {
-    padding-bottom : 0.5rem;
+    padding-bottom : 0.2rem;
     text-align     : center;
     letter-spacing : 0.025rem;
     font-weight    : 300;
