@@ -8,8 +8,9 @@
     @include position-fixed($top:0, $left:0, $z-index:100);
     @include size(100%, 48px);
 
-    background : $mainTheme;
-    font-size  : 1rem;
+    background     : $mainTheme;
+    letter-spacing : 0.3rem;
+    font-size      : 1rem;
 
     a {
         color           : whiteSmoke;
@@ -35,6 +36,7 @@
     padding     : 1em;
     font-weight : normal;
     font-size   : 1em;
+    text-transform: uppercase;
 }
 
 .menu-link {

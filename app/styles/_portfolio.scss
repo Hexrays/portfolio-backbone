@@ -83,37 +83,37 @@
     max-width  : 675px;
     width      : 90%;
     height     : 100%;
-    border     : 5px solid black;
+    border     : 5px solid $offBlack;
     background : $mainLink;
     // background : $cardBkg;
     transition : border 0.3s ease;
 
     &.lnksy {
-        background: #00c1ec;
+        background : #00c1ec;
     }
 
     &.ttui {
-        background: #0088b5;
+        background : #0088b5;
     }
 
     &.hmie {
-        background: #fbc902;
+        background : #fbc902;
     }
 
     &.boat {
-        background: #72eca5;
+        background : #72eca5;
     }
 
     &.stripe {
-        background: #90c1a5;
+        background : #90c1a5;
     }
 
     &.wpfp {
-        background: #dad3c1;
+        background : #dad3c1;
     }
 
     &.halloween {
-        background: #eb9448;
+        background : #eb9448;
     }
 }
 
@@ -157,12 +157,16 @@
     padding-bottom : .5rem;
     line-height    : 1.10;
 
-    @include breakpoint(sm){
-        line-height : 1.25;
-        font-size : 0.95rem;
-    }
+    // em {
+    //     display: none;
+    // }
 
     a {
         font-weight     : bold;
+    }
+
+    @include breakpoint(sm){
+        line-height : 1.25;
+        font-size : 0.95rem;
     }
 }
