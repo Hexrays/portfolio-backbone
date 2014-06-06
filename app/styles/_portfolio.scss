@@ -4,16 +4,22 @@
 // **************************************************
 // **************************************************
 
-.folio-header {
-    width : 100%;
+// .folio-header {
+//     width : 100%;
 
-    h1 {
-        margin      : 0 auto;
-        padding     : 1rem 0;
-        text-align  : center;
-        font-weight : bold;
-        font-size   : 2rem;
-    }
+//     h1 {
+//         margin      : 0 auto;
+//         padding     : 1rem 0;
+//         text-align  : center;
+//         font-weight : bold;
+//         font-size   : 2rem;
+//     }
+// }
+
+.portfolio-container {
+    position    : relative;
+    padding-top : 3rem;
+    width       : 100%;
 }
 
 #portfolio-items {
@@ -78,8 +84,37 @@
     width      : 90%;
     height     : 100%;
     border     : 5px solid black;
-    background : $cardBkg;
+    background : $mainLink;
+    // background : $cardBkg;
     transition : border 0.3s ease;
+
+    &.lnksy {
+        background: #00c1ec;
+    }
+
+    &.ttui {
+        background: #0088b5;
+    }
+
+    &.hmie {
+        background: #fbc902;
+    }
+
+    &.boat {
+        background: #72eca5;
+    }
+
+    &.stripe {
+        background: #90c1a5;
+    }
+
+    &.wpfp {
+        background: #dad3c1;
+    }
+
+    &.halloween {
+        background: #eb9448;
+    }
 }
 
 .img-container {
@@ -89,11 +124,6 @@
     margin-left      : -333px;
     transition       : all 0.3s ease;
     background-color : $cardBkg;
-}
-
-.portfolio-container {
-    position : relative;
-    width    : 100%;
 }
 
 .details {

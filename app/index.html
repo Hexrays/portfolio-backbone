@@ -51,9 +51,9 @@
             </div>
 
             <div id="portfolio" class="page">
-                <header class="folio-header">
+<!--                 <header class="folio-header">
                     <h1>Portfolio</h1>
-                </header>
+                </header> -->
 
                 <div class="portfolio-container">
                     <ul id="portfolio-items"></ul>
@@ -75,7 +75,7 @@
         </div>
 
         <script id="siteTemplate" type="text/template">
-            <div class="site-item flip-container">
+            <div class="site-item flip-container <%= className %>">
                 <!-- // <div class="site-title-box"></div> -->
                 <div class="flipper">
                     <div class="front">
@@ -87,9 +87,9 @@
                             <li class="site-title">
                                 <h1><%= title %></h1>
                             </li>
-                            <li class="site-detail"><a href="<%= url %>" target="_blank">Launch Project</a></li>
                             <li class="site-detail"><em>Description:</em> <%= description %></li>
                             <li class="site-detail"><em>Responsibilities:</em> <%= responsibilities %></li>
+                            <li class="site-detail"><a href="<%= url %>" target="_blank">Launch Project</a></li>
                         </ul>
                     </div>
                 </div>
