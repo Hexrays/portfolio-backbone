@@ -3,17 +3,6 @@ var app = app || {};
 app.siteData = [
     {
         id               : 1,
-        title            : 'LNKSY',
-        className        : 'lnksy',
-        description      : 'A web application created for saving and organizing links. Completed as a final project for a Front-End and Ruby on Rails course at General Assembly in 2013.',
-        responsibilities : 'The objectives were to demonstrate an understanding of all topics covered in the class and use front-end and back-end web development skills to create a website compatible with many browsers.',
-        company          : 'Hexrays',
-        year             : '2013',
-        image            : 'images/lnksy.jpg',
-        url              : 'http://lnksy.herokuapp.com/users/1',
-        keywords         : ['HTML', 'CSS', 'JavaScript', 'jQuery', 'Ruby', 'Ruby on Rails', 'responsive']
-    },{
-        id               : 2,
         title            : 'Time To Up&nbspIt',
         className        : 'ttui',
         description      : 'This site is a part of Prudential\'s Bring Your Challenges suite of online tools. At Luxurious Animals we build an interactive tool that calculates how much more money you would have in retirement by increasing your contribution now.',
@@ -23,6 +12,17 @@ app.siteData = [
         url              : 'http://www.bringyourchallenges.com/time-to-up-it',
         image            : 'images/ttui.jpg',
         keywords         : ['Luxurious Animals', 'HTML', 'CSS', 'JavaScript', 'responsive']
+    },{
+        id               : 2,
+        title            : 'LNKSY',
+        className        : 'lnksy',
+        description      : 'A web application created for saving and organizing links. Completed as a final project for a Front-End and Ruby on Rails course at General Assembly in 2013.',
+        responsibilities : 'The objectives were to demonstrate an understanding of all topics covered in the class and use front-end and back-end web development skills to create a website compatible with many browsers.',
+        company          : 'Hexrays',
+        year             : '2013',
+        image            : 'images/lnksy.jpg',
+        url              : 'http://lnksy.herokuapp.com/users/1',
+        keywords         : ['HTML', 'CSS', 'JavaScript', 'jQuery', 'Ruby', 'Ruby on Rails', 'responsive']
     },{
         id               : 3,
         title            : 'How Much Is&nbspEnough?',
@@ -38,7 +38,7 @@ app.siteData = [
         id               : 4,
         title            : 'Boat Party',
         className        : 'boat',
-        description      : 'A Micro site created in-leu of a traditional invitation to an epic New Years Eve Birthday Celebration.',
+        description      : 'A Micro site created in lieu of a traditional invitation to an epic New Years Eve Birthday Celebration.',
         responsibilities : 'Built using Yeoman, Skrollr was used for the parallax effect, and SVGs for the images.',
         company          : 'Hexrays',
         year             : '2013',
