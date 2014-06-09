@@ -30,7 +30,7 @@
     color          : $mainLink;
     text-transform : uppercase;
     font-weight    : bold;
-    font-size      : 6.5rem;
+    font-size      : 6rem;
     font-family    : $mainHeader;
     transition     : font-size 0.3s ease;
 
@@ -50,14 +50,9 @@
 }
 
 .about-message {
-    // color     : $offBlack;
-    color     : $mainLink;
-    font-family: $mainHeader;
-    font-size : 1.75rem;
-
-    // @include breakpoint(md){
-    //     font-size : 1.75rem;
-    // }
+    color       : $mainLink;
+    font-size   : 1.75rem;
+    font-family : $mainHeader;
 
     @include breakpoint(sm){
         font-size : 1.1rem;
