@@ -151,9 +151,6 @@ $BREAKPOINT-FULL   : 63.75em !default;  // 63.75em;  = 1020px
     } @else if $point == xl {
         @media only screen and (#{$minmax}-width: $BREAKPOINT-XLARGE) { @content; }
     } @else {
-        // Forgive me Jeff, I know I specifically told you to avoid inline, arbitrary
-        // breakpoints, but since scale transforms can't be performed percentage-based
-        // against window size, I've got to break my own rule.
         @media only screen and (#{$minmax}-width: $point)             { @content; }
     }
 }
@@ -188,9 +185,6 @@ $BREAKPOINT-FULL   : 63.75em !default;  // 63.75em;  = 1020px
     } @else if $point == xl {
         @media only screen and (orientation : $orientation) and (#{$minmax}-width: $BREAKPOINT-XLARGE) { @content; }
     } @else {
-        // Forgive me Jeff, I know I specifically told you to avoid inline, arbitrary
-        // breakpoints, but since scale transforms can't be performed percentage-based
-        // against window size, I've got to break my own rule.
         @media only screen and (orientation : $orientation) and (#{$minmax}-width: $point)             { @content; }
     }
 }
