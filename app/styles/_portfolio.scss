@@ -126,7 +126,7 @@
     }
 
     .ttui & {
-        @include background-gradient($ttuiColTop, $ttuiColBottom, to bottom right);
+        @include background-gradient( lighten($ttuiColTop, 10%), $ttuiColBottom, to bottom right);
     }
 
     .hmie & {
@@ -146,7 +146,7 @@
     }
 
     .halloween & {
-        @include background-gradient($halloweenColTop, $halloweenColBottom);
+        @include background-gradient($halloweenColTop, $halloweenColBottom, to right);
     }
 
     @include breakpoint(sm){
