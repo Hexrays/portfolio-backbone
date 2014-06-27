@@ -58,6 +58,17 @@ app.siteData = [
         keywords         : ['Luxurious Animals', 'HTML', 'CSS', 'JavaScript', 'backbone', 'Mobile Web App', 'Facebook API']
     },{
         id               : 6,
+        title            : 'Pinkie Pie\'s Party',
+        className        : 'ppp',
+        description      : 'One in a series of games developed by the Luxurious Animals team for Hasbro\'s My Little Pony.' ,
+        responsibilities : 'Pinkie Pie\'s Party was assigned to me. It was built using Yeoman, Greensock, Createjs, jQuery, and other tools created by Lux to support consistency accross the games.',
+        company          : 'Luxurious Animals',
+        year             : '2014',
+        image            : 'images/mlp-ppp.jpg',
+        url              : 'http://www.hasbro.com/mylittlepony/en_US/play/details.cfm?R=A7A8E37F-5056-9047-F5B3-857B4C5D26B4:en_US',
+        keywords         : ['Luxurious Animals', 'HTML', 'CSS', 'JavaScript', 'jQuery', 'Greensock', 'games']
+    },{
+        id               : 7,
         title            : 'West Point Foundry Preserve&nbspTour',
         className        : 'wpfp',
         description      : 'A mobile site built by the Luxurious Animals team, designed for users to tour the West Point Foundry Preserve on mobile phones and tablets.',
@@ -68,7 +79,7 @@ app.siteData = [
         image            : 'images/wpfp.jpg',
         keywords         : ['Luxurious Animals', 'HTML', 'CSS', 'JavaScript', 'Backbone', 'Mobile Web App', 'Maps']
     },{
-        id               : 7,
+        id               : 9,
         title            : 'Halloween Party',
         className        : 'halloween',
         description      : 'A Micro site created to promote a Halloween bash.',

@@ -103,6 +103,10 @@
         background : lighten(desaturate($halloweenColTop,20%), 25%);
     }
 
+    &.ppp {
+        background : lighten(desaturate($pppColTop,20%), 25%);
+    }
+
 }
 
 .img-container {
@@ -147,6 +151,10 @@
 
     .halloween & {
         @include background-gradient($halloweenColTop, $halloweenColBottom, to right);
+    }
+
+    .ppp & {
+        @include background-gradient($pppColTop, $pppColBottom, to right);
     }
 
     @include breakpoint(sm){
