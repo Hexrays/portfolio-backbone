@@ -28,16 +28,19 @@ app.AppView = Backbone.View.extend({
 
     displayHome: function(){
         this.router.navigate('', true);
+        ga('send', 'event', 'click', 'Home');
         return false;
     },
 
     displayPortfolio: function(){
         this.router.navigate('portfolio', true);
+        ga('send', 'event', 'click', 'Portfolio');
         return false;
     },
 
     displayAbout: function(){
         this.router.navigate('about', true);
+        ga('send', 'event', 'click', 'About');
         return false;
     },
 

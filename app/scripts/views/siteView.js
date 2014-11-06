@@ -3,12 +3,13 @@
 var app = app || {};
 
 app.SiteView = Backbone.View.extend({
-    tagName: 'li',
-    className: 'siteContainer',
-    template: _.template( $('#siteTemplate').html() ),
+    tagName   : 'li',
+    className : 'siteContainer',
+    template  : _.template( $('#siteTemplate').html() ),
 
     events: {
         'click .site-item' : 'onItemTap',
+        'click .site-url'  : 'onLinkClick'
         // 'click .buzzword'  : 'onBuzzwordClick'
     },
 
@@ -27,6 +28,11 @@ app.SiteView = Backbone.View.extend({
             }
         }
     },
+
+    onLinkClick: function(e){
+        var site = 'outgoing: ' + $(e.target).data('site');
+        ga('send', 'event', 'click', site);
+    }
 
     // onBuzzwordClick: function(){
     //     console.log(this.model.collection.filterByKeyword('SVG'));

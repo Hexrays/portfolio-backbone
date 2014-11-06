@@ -79,7 +79,7 @@
                             <li class="site-title">
                                 <h1><%= title %></h1>
                             </li>
-                            <li class="site-detail"><a class="site-url" href="<%= url %>" target="_blank"><span>&rarr;</span> View Live Site</a></li>
+                            <li class="site-detail"><a class="site-url" data-site="<%= title %>" href="<%= url %>" target="_blank"><span>&rarr;</span> View Live Site</a></li>
                             <li class="site-detail"><%= description %> <%= responsibilities %></li>
                             <% if (company === 'Hexrays') { %>
                                 <li class="site-detail site-company">made by Hexrays || <%= year %></li>
