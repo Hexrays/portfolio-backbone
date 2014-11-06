@@ -107,6 +107,30 @@
         background : lighten(desaturate($pppColTop,20%), 25%);
     }
 
+    &.uhd {
+        background : lighten(desaturate($uhdColTop,20%), 25%);
+    }
+
+    &.retro {
+        background : lighten(desaturate($retroColTop,20%), 25%);
+    }
+
+    &.power {
+        background : lighten(desaturate($powerColTop,20%), 25%);
+    }
+
+    &.folio {
+        background : lighten(desaturate($folioColTop,20%), 25%);
+    }
+
+    &.aart {
+        background : lighten(desaturate($aartColTop,20%), 25%);
+    }
+
+    &.ken {
+        background : lighten(desaturate($kenColTop,20%), 25%);
+    }
+
 }
 
 .img-container {
@@ -155,6 +179,30 @@
 
     .ppp & {
         @include background-gradient($pppColTop, $pppColBottom, to right);
+    }
+
+    .uhd & {
+        @include background-gradient($uhdColTop, $uhdColBottom, to right);
+    }
+
+    .retro & {
+        @include background-gradient($retroColTop, $retroColBottom, to bottom left);
+    }
+
+    .power & {
+        @include background-gradient($powerColTop, $powerColBottom, to bottom);
+    }
+
+    .folio & {
+        @include background-gradient($folioColTop, $folioColBottom, to bottom right);
+    }
+
+    .aart & {
+        @include background-gradient($aartColTop, $aartColBottom, to bottom);
+    }
+
+    .ken & {
+        @include background-gradient($kenColTop, $kenColBottom, to bottom);
     }
 
     @include breakpoint(sm){
