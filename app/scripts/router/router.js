@@ -6,6 +6,8 @@ app.FolioRouter = Backbone.Router.extend({
     $pages   : $('.page'),
     $navItem : $('.nav-item'),
 
+    activePage: null,
+
     routes: {
         ''              : 'index',
         'about'         : 'showAbout',
@@ -28,8 +30,27 @@ app.FolioRouter = Backbone.Router.extend({
     },
 
     showPage: function(page) {
-        this.hidePages();
-        $(page).show().css('opacity', 1);
+      var self = this;
+        // this.hidePages();
+        // $(page).show().css('opacity', 1);
+        console.log(page);
+        if(this.activePage) this.hidePage(this.activePage);
+        $(page).velocity('fadeIn', {
+          duration: 250,
+          easing: 'swing',
+          display: page === '#portfolio' ? 'block' : 'flex',
+          complete: function() {
+            self.activePage = page;
+          }
+        });
+    },
+
+    hidePage: function(page) {
+      $(page).velocity('fadeOut', {
+        duration: 250,
+        easing: 'swing',
+        display: 'none'
+      });
     },
 
     hidePages: function() {

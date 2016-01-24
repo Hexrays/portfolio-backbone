@@ -20,16 +20,25 @@ body {
 
 #main {
     box-sizing : border-box;
-    padding    : 48px 0 0;
+    // padding    : 48px 0 0;
     height     : 100%;
 }
 
 .page {
-    display : none;
-    height  : 100%;
-    opacity: 0;
+    position      : absolute;
+    display       : none;
+    min-height    : 100%;
+    width         : 100%;
+    opacity       : 0;
+    // transition : opacity 1s ease;
+}
 
-    // transition: opacity 1s ease;
+.flex-page {
+  display         : flex;
+  min-height: 100%;
+  width: 100%;
+  justify-content : center;
+  align-content   : center;
 }
 
 img {
