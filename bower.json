@@ -1,11 +1,15 @@
 {
-  "name": "folio-backbone",
+  "name": "yotest",
   "private": true,
   "dependencies": {
-    "modernizr": "~2.6.2",
-    "jquery": "~1.11.0",
-    "backbone": "~1.1.2",
-    "underscore": "~1.6.0"
+    "jquery": "~2.1.1",
+    "modernizr": "~2.8.1",
+    "backbone": "~1.2.3",
+    "underscore": "~1.8.3",
+    "velocity": "~1.2.3"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "chai": "~3.4.2",
+    "mocha": "~2.3.4"
+  }
 }
