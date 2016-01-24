@@ -16,7 +16,7 @@
 
 .siteContainer {
     display : inline-flex;
-    margin  : 0 auto 3rem;
+    margin  : 3rem auto ;
     width   : 100%;
     height  : 450px;
 }
@@ -112,7 +112,7 @@
     }
 
     &.retro {
-        background : lighten(desaturate($retroColTop,20%), 25%);
+        background : lighten(desaturate($retroColTop,20%), 15%);
     }
 
     &.power {
@@ -129,6 +129,18 @@
 
     &.ken {
         background : lighten(desaturate($kenColTop,20%), 25%);
+    }
+
+    &.cpi {
+        background : lighten(desaturate($cpiColTop,20%), 25%);
+    }
+
+    &.dwtf {
+        background : lighten(desaturate($dwtfColTop,20%), 25%);
+    }
+
+    &.painton {
+        background : lighten(desaturate($paintonColTop,20%), 25%);
     }
 
 }
@@ -203,6 +215,18 @@
 
     .ken & {
         @include background-gradient($kenColTop, $kenColBottom, to bottom);
+    }
+
+    .cpi & {
+        @include background-gradient($cpiColTop, $cpiColBottom, to bottom);
+    }
+
+    .dwtf & {
+        @include background-gradient($dwtfColTop, $dwtfColBottom, to bottom);
+    }
+
+    .painton & {
+        @include background-gradient($paintonColTop, $paintonColBottom, to bottom);
     }
 
     @include breakpoint(sm){

@@ -3,6 +3,16 @@ var app = app || {};
 app.siteData = [
     {
         id               : 1,
+        title            : 'DeutschWTF',
+        className        : 'dwtf',
+        description      : 'I was the sole developer on a site built to, umm, not quite celebrate the moving of Deutsch’s New York office. The web app was build so that once we arrived to the new neighborhood we would know “Where To Find” (WTF) things like “a quick lunch,” “caffeine,” or even “inspiration.”',
+        responsibilities : 'It was built with React and Flux on the frontend and Express and MongoDB on the back. The Yelp api was used for inserting businesses into the database.',
+        company          : 'Deutsch',
+        year             : '2015',
+        image            : 'images/dwtf.jpg',
+        url              : 'http://www.deutschwtf.com/'
+    },{
+        id               : 2,
         title            : 'Time To Up&nbspIt',
         className        : 'ttui',
         description      : 'This site is a part of Prudential\'s Bring Your Challenges suite of online tools. At Luxurious Animals we build an interactive tool that calculates how much more money you would have in retirement by increasing your contribution now.',
@@ -10,9 +20,19 @@ app.siteData = [
         company          : 'Luxurious Animals',
         year             : '2014',
         url              : 'http://www.bringyourchallenges.com/time-to-up-it',
-        image            : 'images/ttui.jpg',
+        image            : 'images/ttui.jpg'
     },{
-        id               : 2,
+        id               : 3,
+        title            : 'Christmas Price Index 2015',
+        className        : 'cpi',
+        description      : 'PNC Bank built the world\'s first working bank made of gingerbread. #GingerbreadBranch. The site employs an augmented reality virtual tour of the branch to explore the prices of each gift in the 12 days of Christmas.',
+        responsibilities : 'I lead the development on the site using ES6 and Babel to transpile. I used ThreeJS and Backbone for the AR tour. It was awarded FWA’s Mobile Site of the Day on Christmas Eve.',
+        company          : 'Deutsch',
+        year             : '2015',
+        image            : 'images/cpi.jpg',
+        url              : 'https://www.pncchristmaspriceindex.com'
+    },{
+        id               : 4,
         title            : 'Ultra-Hd Article',
         className        : 'uhd',
         description      : 'I joined Access Intelligence to work with a small team on a series of parallax scrolling articles.',
@@ -20,9 +40,19 @@ app.siteData = [
         company          : 'Access Intelligence',
         year             : '2014',
         image            : 'images/ultrahd.png',
-        url              : 'http://www.satellitetoday.com/long-form-stories/ultra-hd-coming-to-a-screen-near-you/',
+        url              : 'http://www.satellitetoday.com/long-form-stories/ultra-hd-coming-to-a-screen-near-you/'
     },{
-        id               : 3,
+        id               : 5,
+        title            : 'PaintOn',
+        className        : 'painton',
+        description      : 'PaintOn.com lets you fuel your creative flame with HGTV HOME by Sherwin-Williams. Browse Color Collections, paint products, and inspiration and get inspired to Paint On.',
+        responsibilities : 'With a team of developers and designers worked throughout the site to generate front-end code and integrate it with a Java back-end.',
+        company          : 'Deutsch',
+        year             : '2015',
+        image            : 'images/painton.jpg',
+        url              : 'http://www.painton.com/'
+    },{
+        id               : 6,
         title            : 'Aarting',
         className        : 'aart',
         description      : 'Aarting is a site for artists to create and sell their own limited-edition products.',
@@ -30,19 +60,9 @@ app.siteData = [
         company          : 'Hexrays',
         year             : '2014',
         image            : 'images/aarting.jpg',
-        url              : 'http://aarting.com/',
+        url              : 'http://aarting.com/'
     },{
-        id               : 4,
-        title            : 'Regulatory Update Article',
-        className        : 'power',
-        description      : 'With the regulatory update article we were tasked with the challenge of making reading a list of environmental regulations an interesting experience.' ,
-        responsibilities : 'I was able to build upon the framework with what I learned on previous projects to make the development of parallax scrolling articles quicker and easier.',
-        company          : 'Access Intelligence',
-        year             : '2014',
-        image            : 'images/power.jpg',
-        url              : 'http://powermag.com/long-form-stories/bw-power/',
-    },{
-        id               : 5,
+        id               : 7,
         title            : 'Halloween Party',
         className        : 'halloween',
         description      : 'A Micro site created to promote a Halloween bash.',
@@ -50,27 +70,7 @@ app.siteData = [
         company          : 'Hexrays',
         year             : '2013',
         image            : 'images/halloween.png',
-        url              : 'http://hexrays.at/parties/halloween2013/',
-    },{
-        id               : 6,
-        title            : 'Folio 100',
-        className        : 'folio',
-        description      : 'The Folio 100 is an awards program celebrating members of the magazine and media industry.' ,
-        responsibilities : 'It was designed by Access Intelligence and I was chosen to lead the development on the project. I prototyped and built it using Yeoman and AngularJs.',
-        company          : 'Access Intelligence',
-        year             : '2014',
-        image            : 'images/folio100.jpg',
-        url              : 'http://www.medianextshow.com/folio100/#/',
-    },{
-        id               : 7,
-        title            : 'Retrofitting Article',
-        className        : 'retro',
-        description      : 'Retrofitting is part a series of parallax scrolling articles built with Access Intelligence.',
-        responsibilities : 'With Retrofitting, I was allowed to rework Access Intelligence\'s previously built framework utilizing a more object oriented approach to building JavaScript projects.',
-        company          : 'Access Intelligence',
-        year             : '2014',
-        image            : 'images/retrofitting.jpg',
-        url              : 'http://interactive.avionicstoday.com/retrofitting-future-airspace-mandates/',
+        url              : 'http://hexrays.at/parties/halloween2013/'
     },{
         id               : 8,
         title            : 'How Much Is&nbspEnough?',
@@ -80,7 +80,7 @@ app.siteData = [
         company          : 'Luxurious Animals',
         year             : '2014',
         url              : 'http://www.bringyourchallenges.com/how-much-is-enough',
-        image            : 'images/ribbon.jpg',
+        image            : 'images/ribbon.jpg'
     },{
         id               : 9,
         title            : 'Boat Party',
@@ -90,7 +90,7 @@ app.siteData = [
         company          : 'Hexrays',
         year             : '2013',
         image            : 'images/boat.jpg',
-        url              : 'http://nyeboatparty2014.com/',
+        url              : 'http://nyeboatparty2014.com/'
     },{
         id               : 10,
         title            : 'Pinkie Pie\'s Party',
@@ -100,9 +100,19 @@ app.siteData = [
         company          : 'Luxurious Animals',
         year             : '2014',
         image            : 'images/mlp-ppp.jpg',
-        url              : 'http://www.hasbro.com/mylittlepony/en_US/play/details.cfm?R=A7A8E37F-5056-9047-F5B3-857B4C5D26B4:en_US',
+        url              : 'http://www.hasbro.com/mylittlepony/en_US/play/details.cfm?R=A7A8E37F-5056-9047-F5B3-857B4C5D26B4:en_US'
     },{
         id               : 11,
+        title            : 'Folio 100',
+        className        : 'folio',
+        description      : 'The Folio 100 is an awards program celebrating members of the magazine and media industry.' ,
+        responsibilities : 'It was designed by Access Intelligence and I was chosen to lead the development on the project. I prototyped and built it using Yeoman and AngularJs.',
+        company          : 'Access Intelligence',
+        year             : '2014',
+        image            : 'images/folio100.jpg',
+        url              : 'http://www.medianextshow.com/folio100/#/'
+    },{
+        id               : 12,
         title            : 'Stripe Yourself',
         className        : 'stripe',
         description      : 'Stripe Yourself is an app for the San Diego Zoo that allows users to upload their photos and decorate their face with tiger stripes, fur, eyes, ears, whiskers and change the background elements. The application works across browsers and on touch devices.',
@@ -110,9 +120,9 @@ app.siteData = [
         company          : 'Luxurious Animals',
         year             : '2014',
         url              : 'http://sdzsafaripark.org/stripeyourself/',
-        image            : 'images/stripe.jpg',
+        image            : 'images/stripe.jpg'
     },{
-        id               : 12,
+        id               : 13,
         title            : 'Ken Hunt',
         className        : 'ken',
         description      : 'Ken Hunt is an HTML5 game I built as a joke for one of my friends on his birthday.',
@@ -120,9 +130,11 @@ app.siteData = [
         company          : 'Hexrays',
         year             : '2014',
         image            : 'images/kenhunt.jpg',
-        url              : 'http://hexrays.at/stuff/kenhunt/',
+        url              : 'http://hexrays.at/stuff/kenhunt/'
     }
 ];
+
+
 
 
     // },{
@@ -148,3 +160,25 @@ app.siteData = [
     //     url              : 'http://foundrytour.org/',
     //     image            : 'images/wpfp.jpg',
     //     keywords         : ['Luxurious Animals', 'HTML', 'CSS', 'JavaScript', 'Backbone', 'Mobile Web App', 'Maps']
+        // {
+        //     id               : 4,
+        //     title            : 'Regulatory Update Article',
+        //     className        : 'power',
+        //     description      : 'With the regulatory update article we were tasked with the challenge of making reading a list of environmental regulations an interesting experience.' ,
+        //     responsibilities : 'I was able to build upon the framework with what I learned on previous projects to make the development of parallax scrolling articles quicker and easier.',
+        //     company          : 'Access Intelligence',
+        //     year             : '2014',
+        //     image            : 'images/power.jpg',
+        //     url              : 'http://powermag.com/long-form-stories/bw-power/',
+        // },
+        // ,{
+        //       id               : 7,
+        //       title            : 'Retrofitting Article',
+        //       className        : 'retro',
+        //       description      : 'Retrofitting is part a series of parallax scrolling articles built with Access Intelligence.',
+        //       responsibilities : 'With Retrofitting, I was allowed to rework Access Intelligence\'s previously built framework utilizing a more object oriented approach to building JavaScript projects.',
+        //       company          : 'Access Intelligence',
+        //       year             : '2014',
+        //       image            : 'images/retrofitting.jpg',
+        //       url              : 'http://interactive.avionicstoday.com/retrofitting-future-airspace-mandates/',
+        //   }
