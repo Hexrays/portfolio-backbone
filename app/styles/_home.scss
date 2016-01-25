@@ -15,12 +15,20 @@
 
 .home-content {
     margin     : auto;
-    max-width  : 579px;
+    max-width  : 600px;
     width      : 80%;
     align-self : center;
+    color          : #fff;
+    text-align     : center;
+    text-transform : uppercase;
+    letter-spacing : .02rem;
+    font-family    : $mainHeader;
+    line-height    : 1.2;
+    transition     : font-size 0.25s ease;
 
     @include breakpoint(xs){
         width : 270px;
+        // line-height    : 2.75rem;
     }
 }
 
@@ -38,19 +46,34 @@
 //     }
 // }
 
-.home-subheader {
-    color          : #fff;
-    text-align     : center;
-    text-transform : uppercase;
-    letter-spacing : .02rem;
-    font-size      : 4.65rem;
-    font-family    : $mainHeader;
-    line-height    : 5.5rem;
-    transition     : font-size 0.25s ease;
+.home-header {
+    font-size: 15rem;
+    line-height: 0.9;
+
+    span {
+      display: inline-block;
+    }
 
     @include breakpoint(xs){
-        font-size      : 2.5em;
-        line-height    : 2.75rem;
+      font-size: 5rem;
+    }
+}
+
+.home-subheader {
+    font-size      : 11rem;
+
+
+    @include breakpoint(xs){
+        font-size      : 3em;
+    }
+}
+
+.home-copy {
+    font-size      : 3rem;
+
+
+    @include breakpoint(xs){
+        font-size      : 1.5em;
     }
 }
 
@@ -63,9 +86,9 @@
     &:after {
         content: '';
         position: absolute;
-        bottom: 15px;
+        bottom: 18%;
         left: 0;
-        height: 15px;
+        height: 6px;
         width: 100%;
         background-color: rgba( darkred,0.35);
         z-index: 0;

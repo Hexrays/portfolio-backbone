@@ -6,7 +6,8 @@
     "modernizr": "~2.8.1",
     "backbone": "~1.2.3",
     "underscore": "~1.8.3",
-    "velocity": "~1.2.3"
+    "velocity": "~1.2.3",
+    "blast-text": "~2.0.0"
   },
   "devDependencies": {
     "chai": "~3.4.2",

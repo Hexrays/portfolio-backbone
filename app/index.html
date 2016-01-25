@@ -38,11 +38,17 @@
         <div id="main">
             <div id="home" class="page">
                 <div class="flex-page">
-                  <div class="home-content">
+                  <!-- <div class="home-content">
                       <h2 class="home-subheader">Hi, I'm <a class="home-link" href="#about">Jeff</a>.<br>
                       I make websites.<br>
                       This is my site.<br>
                       You can check out some other <a class="home-link" href="#portfolio">projects here</a>.</h2>
+                  </div> -->
+                  <div class="home-content">
+                      <h1 class="home-header">Hello</h1>
+                      <h2 class="home-subheader">I'm Jeff</h2>
+                      <p class="home-copy">Check out some of my <a href="#portfolio" class="home-link">projects</a>.</p> 
+                      <p class="home-copy">Or learn something <a href="#about" class="home-link">about</a> me.</p>
                   </div>
                 </div>
             </div>
@@ -117,6 +123,7 @@
         <script src="/bower_components/backbone/backbone.js"></script>
         <script src="/bower_components/velocity/velocity.js"></script>
         <script src="/bower_components/velocity/velocity.ui.js"></script>
+        <script src="/bower_components/blast-text/jquery.blast.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -124,6 +131,7 @@
         <script src="scripts/data/portfolioData.js"></script>
         <script src="scripts/models/site.js"></script>
         <script src="scripts/collections/portfolio.js"></script>
+        <script src="scripts/views/homeView.js"></script>
         <script src="scripts/views/portfolioView.js"></script>
         <script src="scripts/views/siteView.js"></script>
         <script src="scripts/router/router.js"></script>

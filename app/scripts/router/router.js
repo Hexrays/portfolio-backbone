@@ -8,6 +8,11 @@ app.FolioRouter = Backbone.Router.extend({
 
     activePage: null,
 
+    views     : {
+        folio: null,
+        home: null
+    },
+
     routes: {
         ''              : 'index',
         'about'         : 'showAbout',
@@ -16,8 +21,11 @@ app.FolioRouter = Backbone.Router.extend({
     },
 
     initialize: function(){
+        this.views = {
+            folio: new app.PortfolioView(app.siteData),
+            home: new app.HomeView()
+        };
         Backbone.history.start({ pushState: false });
-        // this.$pages = $('.page');
     },
 
     addActive: function(section){
@@ -31,12 +39,10 @@ app.FolioRouter = Backbone.Router.extend({
 
     showPage: function(page) {
       var self = this;
-        // this.hidePages();
-        // $(page).show().css('opacity', 1);
-        console.log(page);
+
         if(this.activePage) this.hidePage(this.activePage);
         $(page).velocity('fadeIn', {
-          duration: 250,
+          duration: 200,
           easing: 'swing',
           display: page === '#portfolio' ? 'block' : 'flex',
           complete: function() {
@@ -47,7 +53,7 @@ app.FolioRouter = Backbone.Router.extend({
 
     hidePage: function(page) {
       $(page).velocity('fadeOut', {
-        duration: 250,
+        duration: 200,
         easing: 'swing',
         display: 'none'
       });
@@ -58,6 +64,7 @@ app.FolioRouter = Backbone.Router.extend({
     },
 
     index: function(){
+        this.views.home.sayHello();
         this.removeActive();
         this.showPage('#home');
     },
@@ -70,11 +77,6 @@ app.FolioRouter = Backbone.Router.extend({
     showPortfolio: function(){
         this.addActive('.portfolio-link');
         this.showPage('#portfolio');
-    },
-
-    // filterPortfolio: function(id){
-        // this.showPage('#portfolio');
-        // this.navigate('portfolio/' + id, {trigger: true} );
-    // }
+    }
 
 });

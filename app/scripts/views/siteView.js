@@ -1,5 +1,7 @@
 'use strict';
 
+// This file is for portfolio site views
+
 var app = app || {};
 
 app.SiteView = Backbone.View.extend({
@@ -33,9 +35,4 @@ app.SiteView = Backbone.View.extend({
         var site = 'outgoing: ' + $(e.target).data('site');
         ga('send', 'event', 'click', site);
     }
-
-    // onBuzzwordClick: function(){
-    //     console.log(this.model.collection.filterByKeyword('SVG'));
-    //     // console.log(app.Portfolio);
-    // }
 });

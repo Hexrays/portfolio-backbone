@@ -7,9 +7,7 @@ app.AppView = Backbone.View.extend({
     $menu     : $('#menu'),
     $menuLink : $('.menu-link'),
 
-    views     : {
-        folio: null
-    },
+    
 
     events    : {
         'click .nav-link-home'  : 'displayHome',
@@ -21,13 +19,12 @@ app.AppView = Backbone.View.extend({
 
     initialize: function(){
         this.router = new app.FolioRouter();
-        this.views = {
-            folio: new app.PortfolioView(app.siteData)
-        };
+        
     },
 
     displayHome: function(){
         this.router.navigate('', true);
+        console.log('homey');
         ga('send', 'event', 'click', 'Home');
         return false;
     },
