@@ -7,6 +7,7 @@
 #home {
     // display                    : flex;
     background                 : $mainLink;
+    overflow: hidden;
 
     @include breakpoint(xs){
         margin-top : 0;
@@ -14,6 +15,7 @@
 }
 
 .home-content {
+    position: relative;
     margin     : auto;
     max-width  : 600px;
     width      : 80%;
@@ -26,10 +28,22 @@
     line-height    : 1.2;
     transition     : font-size 0.25s ease;
 
+    span {
+      display: inline-block;
+    }
+
     @include breakpoint(xs){
-        width : 270px;
+        width : 280px;
         // line-height    : 2.75rem;
     }
+}
+
+.dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: lime;
+  margin: -2px 0 0 -2px;
 }
 
 // .home-header {
@@ -50,30 +64,40 @@
     font-size: 15rem;
     line-height: 0.9;
 
-    span {
-      display: inline-block;
-    }
-
     @include breakpoint(xs){
-      font-size: 5rem;
+      font-size: 7.5rem;
     }
 }
 
 .home-subheader {
-    font-size      : 11rem;
-
+    font-size      : 8rem;
 
     @include breakpoint(xs){
-        font-size      : 3em;
+        font-size      : 4.5em;
     }
 }
 
 .home-copy {
     font-size      : 3rem;
 
+    &.copy-projects {
+      font-size: 2.47rem;
+    }
+
+    &.copy-about {
+      font-size: 2.65rem;
+    }
 
     @include breakpoint(xs){
-        font-size      : 1.5em;
+        font-size      : 1rem;
+
+        &.copy-projects {
+          font-size: 1.4rem;
+        }
+
+        &.copy-about {
+          font-size: 1.4rem;
+        }
     }
 }
 

@@ -64,9 +64,9 @@ app.FolioRouter = Backbone.Router.extend({
     },
 
     index: function(){
-        this.views.home.sayHello();
         this.removeActive();
         this.showPage('#home');
+        _.delay(this.views.home.sayHello, 300);
     },
 
     showAbout: function(){
