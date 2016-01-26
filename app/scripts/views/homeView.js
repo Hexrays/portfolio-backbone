@@ -5,21 +5,24 @@ var app = app || {};
 app.HomeView = Backbone.View.extend({
     el : '#home',
 
-    $homeContents : $('.home-content'),
-    $header       : $('.home-header'),
-    $subheader    : $('.subheader'),
-    $headerSpans  : null,
-    $homeSpans    : null,
+    $homeContents   : $('.home-content'),
+    $header         : $('.home-header'),
+    $subheader      : $('.home-subheader'),
+    $headerSpans    : null,
+    $subheaderSpans : null,
+    $homeSpans      : null,
 
     initialize() {
         _.bindAll(this,
-            'sayHello'
+            'sayHello',
+            'explodeSubheader'
         );
         this.$homeContents.blast({
             delimiter : 'character'
         });
-        this.$headerSpans = this.$header.find('span');
-        this.$homeSpans   = this.$homeContents.find('span');
+        this.$headerSpans    = this.$header.find('span');
+        this.$subheaderSpans = this.$subheader.find('span');
+        this.$homeSpans      = this.$homeContents.find('span');
         console.log('ready');
         window.boom = () => this.sayHello();
     },
@@ -51,9 +54,9 @@ app.HomeView = Backbone.View.extend({
                 opacity    : 1
             }, {
                 duration : 300,
-                delay    : delay,
+                delay    : delay
                 // easing   : [50, 5],
-                complete : this.onUnexplode
+                // complete : this.onUnexplode
             });
     },
 
@@ -64,6 +67,14 @@ app.HomeView = Backbone.View.extend({
     explodeHeader() {
         let self = this;
         this.$headerSpans.each(function() {
+            self.explodeText($(this));
+        });
+        _.delay(this.explodeSubheader, 2000);
+    },
+
+    explodeSubheader() {
+        let self = this;
+        this.$subheaderSpans.each(function() {
             self.explodeText($(this));
         });
     },
