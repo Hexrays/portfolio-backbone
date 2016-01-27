@@ -140,12 +140,9 @@ app.HomeView = Backbone.View.extend({
 
     sayHello() {
         let num = Math.floor(this.getRandom(0, 2));
-        console.log(num);
         if(num) {
-            console.log('just splode');
             this.explodeHeader();
         } else {
-            console.log('center');
             this.explodeFromCenter(this.$homeSpans);
         }
     }
