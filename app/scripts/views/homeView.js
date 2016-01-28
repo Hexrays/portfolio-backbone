@@ -42,7 +42,7 @@ app.HomeView = Backbone.View.extend({
         console.log(track);
         ga('send', 'event', 'click', track);
         this.explode(this.$homeSpans, center);
-        _.delay(this.navigateToPage, 1200, targetPage);
+        _.delay(this.navigateToPage, 400, targetPage);
     },
 
     navigateToPage(page) {
@@ -120,12 +120,9 @@ app.HomeView = Backbone.View.extend({
         let ang = this.getRandom(baseAng - 5, baseAng + 5);
         let offsetX = 100 * Math.cos( ang ) + distX;
         let offsetY = 100 * Math.sin( ang ) + distY;
-        var scale = this.getRandom(0.5, 2);
-        var delay = this.getRandom(1100, 1200);
-        var op = this.getRandom(0.75, 0.95);
-
-// console.log(ltr, Math.floor(ang), Math.floor(offsetX), Math.floor(offsetY), posX, posY, center.x, center.y);
-// console.log(ltr, posX, posY);
+        let scale = this.getRandom(0.5, 2);
+        let delay = this.getRandom(1100, 1200);
+        let op = this.getRandom(0.75, 0.95);
 
         $el.velocity({
             translateX : offsetX,
@@ -133,9 +130,10 @@ app.HomeView = Backbone.View.extend({
             scale      : scale,
             opacity    : op
         }, {
-            duration : 300,
+            duration : 400,
             // delay    : 700,
-            easing   : [250, 15]
+            easing   : [0.07, .67, 0, 1]
+            // easing   : 'easeOutQuart'
         }).velocity({
             translateX : 0,
             translateY : 0,
