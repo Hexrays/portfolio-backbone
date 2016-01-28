@@ -12,6 +12,10 @@ app.HomeView = Backbone.View.extend({
     $subheaderSpans : null,
     $homeSpans      : null,
 
+    events    : {
+        'click .home-link'  : 'onHomeLinkClick'
+    },
+
     initialize() {
         _.bindAll(this,
             'sayHello',
@@ -23,8 +27,27 @@ app.HomeView = Backbone.View.extend({
         this.$headerSpans    = this.$header.find('span');
         this.$subheaderSpans = this.$subheader.find('span');
         this.$homeSpans      = this.$homeContents.find('span');
-        console.log('ready');
+        
         window.boom = () => this.sayHello();
+    },
+
+    onHomeLinkClick(e) {
+        e.preventDefault();
+        let targetPage = e.currentTarget.getAttribute('href').split('#')[1];
+        let track = 'Explode Link: ' + targetPage;
+        let center = {
+            x : e.clientX,
+            y : e.clientY
+        };
+        console.log(track);
+        ga('send', 'event', 'click', track);
+        this.explode(this.$homeSpans, center);
+        _.delay(this.navigateToPage, 1200, targetPage);
+    },
+
+    navigateToPage(page) {
+        app.router.navigate(page, true);
+
     },
 
     getRandom(min, max) {
@@ -98,7 +121,7 @@ app.HomeView = Backbone.View.extend({
         let offsetX = 100 * Math.cos( ang ) + distX;
         let offsetY = 100 * Math.sin( ang ) + distY;
         var scale = this.getRandom(0.5, 2);
-        var delay = this.getRandom(800, 1200);
+        var delay = this.getRandom(1100, 1200);
         var op = this.getRandom(0.75, 0.95);
 
 // console.log(ltr, Math.floor(ang), Math.floor(offsetX), Math.floor(offsetY), posX, posY, center.x, center.y);
@@ -111,7 +134,7 @@ app.HomeView = Backbone.View.extend({
             opacity    : op
         }, {
             duration : 300,
-            delay    : 700,
+            // delay    : 700,
             easing   : [250, 15]
         }).velocity({
             translateX : 0,
@@ -125,15 +148,17 @@ app.HomeView = Backbone.View.extend({
         });
     },
 
-    explodeFromCenter($el) {
-        // console.log(this.$heroUnit);
-        let self = this;
+    explodeFromCenter($els) {
         let vertCenter = this.$el.outerHeight() / 2;
         let horizCenter = this.$el.outerWidth(true) / 2;
         let center = {x : horizCenter, y : vertCenter};
-// console.log(center.x, center.y);
 
-        $el.each(function() {
+        this.expode($els, center);
+    },
+
+    explode($els, center) {
+        let self = this;
+        $els.each(function() {
             self.explodeTextFromCenter($(this), center, $(this).text());
         });
     },
@@ -143,7 +168,7 @@ app.HomeView = Backbone.View.extend({
         if(num) {
             this.explodeHeader();
         } else {
-            this.explodeFromCenter(this.$homeSpans);
+        this.explodeFromCenter(this.$homeSpans);
         }
     }
 });
