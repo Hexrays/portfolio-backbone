@@ -134,7 +134,7 @@
 // Note: 568 px is iphone 5 landscape
 $BREAKPOINT-XSMALL : 35.5em  !default;  // 35.5em;   = 568px
 $BREAKPOINT-SMALL  : 40em    !default;  // 40em;     = 640px
-$BREAKPOINT-MEDIUM : 50em    !default;  // 50em;     = 800px
+$BREAKPOINT-MEDIUM : 767px   !default;  // nope 50em;     = 800px
 $BREAKPOINT-LARGE  : 64em    !default;  // 64em;     = 1024px
 $BREAKPOINT-XLARGE : 82.5em  !default;  // 82.5em;   = 1320px
 $BREAKPOINT-FULL   : 63.75em !default;  // 63.75em;  = 1020px

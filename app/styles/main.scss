@@ -59,6 +59,12 @@ a {
     }
 }
 
+.clearfix:after {
+  display : table;
+  clear   : both;
+  content : "";
+}
+
 @import "nav";
 @import "home";
 @import "portfolio";

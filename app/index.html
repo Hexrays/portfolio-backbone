@@ -70,29 +70,32 @@
                 </div>
             </div>
         </div>
-
         <script id="siteTemplate" type="text/template">
-            <div class="site-item flip-container <%= className %>">
-                <!-- // <div class="site-title-box"></div> -->
-                <div class="flipper">
-                    <div class="front">
-                        <div class="img-container"><img src="<%= image %>" alt="<%= title %>"></div>
+            <div class="site-container">
+                <div class="site-item flip-container <%= className %>">
+                    <!-- // <div class="site-title-box"></div> -->
+                    <div class="flipper">
+                        <div class="front">
+                            <div class="img-container"><img src="<%= image %>" alt="<%= title %>"></div>
+                        </div>
+
+                        <div class="back">
+                            <ul class="details">
+                                <li class="site-detail"><a class="site-url" data-site="<%= title %>" href="<%= url %>" target="_blank"><span>&rarr;</span> View Live Site</a></li>
+                                <li class="site-detail"><%= description %> <%= responsibilities %></li>
+                                <% if (company === 'Hexrays') { %>
+                                    <li class="site-detail site-company">created by Hexrays || <%= year %></li>
+                                <% } else { %>
+                                    <li class="site-detail site-company">created at <%= company %> || <%= year %></li>
+                                <% }  %>
+                            </ul>
+                        </div>
                     </div>
 
-                    <div class="back">
-                        <ul class="details">
-                            <li class="site-title">
-                                <h1><%= title %></h1>
-                            </li>
-                            <li class="site-detail"><a class="site-url" data-site="<%= title %>" href="<%= url %>" target="_blank"><span>&rarr;</span> View Live Site</a></li>
-                            <li class="site-detail"><%= description %> <%= responsibilities %></li>
-                            <% if (company === 'Hexrays') { %>
-                                <li class="site-detail site-company">created by Hexrays || <%= year %></li>
-                            <% } else { %>
-                                <li class="site-detail site-company">created at <%= company %> || <%= year %></li>
-                            <% }  %>
-                        </ul>
-                    </div>
+                </div>
+                <div class="site-title clearfix">
+                    <h3><%= title %></h3>
+                    <p class="site-client">Client: <%= client %></p>
                 </div>
             </div>
         </script>

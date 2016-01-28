@@ -6,7 +6,7 @@ var app = app || {};
 
 app.SiteView = Backbone.View.extend({
     tagName   : 'li',
-    className : 'siteContainer',
+    className : 'site',
     template  : _.template( $('#siteTemplate').html() ),
 
     events: {
