@@ -81,13 +81,13 @@
 
                         <div class="back">
                             <ul class="details">
-                                <li class="site-detail"><a class="site-url" data-site="<%= title %>" href="<%= url %>" target="_blank"><span>&rarr;</span> View Live Site</a></li>
-                                <li class="site-detail"><%= description %> <%= responsibilities %></li>
+                                <div class="site-detail"><%= description %> <%= responsibilities %></div>
                                 <% if (company === 'Hexrays') { %>
-                                    <li class="site-detail site-company">created by Hexrays || <%= year %></li>
+                                    <div class="site-detail site-company">created by Hexrays, <%= year %></div>
                                 <% } else { %>
-                                    <li class="site-detail site-company">created at <%= company %> || <%= year %></li>
+                                    <div class="site-detail site-company">created at <%= company %>, <%= year %></div>
                                 <% }  %>
+                                <div class="site-detail"><a class="site-url" data-site="<%= title %>" href="<%= url %>" target="_blank"><span>&rarr;</span> View Live Site</a></div>
                             </ul>
                         </div>
                     </div>

@@ -123,7 +123,7 @@
     }
 
     &.uhd {
-        background : lighten(desaturate($uhdColTop,20%), 25%);
+        background : lighten(desaturate($uhdColTop,10%), 15%);
     }
 
     &.retro {
@@ -233,15 +233,19 @@
     }
 
     .cpi & {
-        @include background-gradient($cpiColTop, $cpiColBottom, to bottom);
+        @include background-gradient($cpiColTop, $cpiColBottom, to bottom right);
     }
 
     .dwtf & {
-        @include background-gradient($dwtfColTop, $dwtfColBottom, to bottom);
+        @include background-gradient($dwtfColTop, $dwtfColBottom, to bottom left);
     }
 
     .painton & {
         @include background-gradient($paintonColTop, $paintonColBottom, to bottom);
+    }
+
+    @include breakpoint(xl, min ) {
+      padding: 4rem;
     }
 
     @include breakpoint(lg){
@@ -318,8 +322,13 @@
 .site-url {
     @include size(175px,40px);
 
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
     display          : block;
-    margin           : 1rem auto;
+    margin           : 0 auto 1.5rem;
     border           : 2px solid white;
     background-color : rgba(255,255,255,0);
     color            : #fff;
@@ -338,8 +347,16 @@
         color            : #fff;
     }
 
+    @include breakpoint(xl, min ) {
+      margin-bottom: 4rem;
+    }
+
+    @include breakpoint(xl ) {
+      margin-bottom: 3rem;
+    }
+
     @include breakpoint(lg){
-      margin           : 0 auto 1rem;
+      margin           : 0 auto 1.5rem;
     }
 
 }
