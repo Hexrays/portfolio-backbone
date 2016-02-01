@@ -3,9 +3,9 @@ var app = app || {};
 app.siteData = [
     {
         id               : 1,
-        title            : 'DeutschWTF',
+        title            : 'Deutsch WTF',
         className        : 'dwtf',
-        description      : 'I was the sole developer on a site built to, umm, not quite celebrate the moving of Deutsch’s New York office. The web app was build so that once we arrived to the new neighborhood we would know “Where To Find” (WTF) things like “a quick lunch,” “caffeine,” or even “inspiration.”',
+        description      : 'I was the sole developer on a site built to, uh, not quite celebrate the moving of Deutsch’s New York office. The web app was build so that once we arrived to the new neighborhood we would know “Where To Find” (WTF) things like “a quick lunch,” “caffeine,” or even “inspiration.”',
         responsibilities : 'It was built with React and Flux on the frontend and Express and MongoDB on the back.',
         company          : 'Deutsch',
         year             : '2015',
@@ -47,7 +47,7 @@ app.siteData = [
         client           : 'Via Satellite'
     },{
         id               : 5,
-        title            : 'PaintOn',
+        title            : 'Paint On',
         className        : 'painton',
         description      : 'PaintOn.com lets you fuel your creative flame with HGTV HOME by Sherwin-Williams. Browse Color Collections, paint products, and inspiration and get inspired to Paint On.',
         responsibilities : 'With a team of developers and designers worked throughout the site to generate front-end code and integrate it with a Java back-end.',
@@ -62,7 +62,7 @@ app.siteData = [
         className        : 'aart',
         description      : 'Aarting is a site for artists to create and sell their own limited-edition products.',
         responsibilities : 'I was tasked with adding JavaScript feature enhancements to the front-end of the site which was built with Ruby on Rails. My main focus was building the view to scale feature for prints and the t-shirt creator using canvas and FabricJs.',
-        company          : 'Hexrays',
+        company          : 'Aarting',
         year             : '2014',
         image            : 'images/aarting.jpg',
         url              : 'http://aarting.com/',
