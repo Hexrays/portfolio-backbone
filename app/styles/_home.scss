@@ -64,6 +64,10 @@
     font-size: 15rem;
     line-height: 0.9;
 
+    @include breakpoint(md){
+      font-size: 13rem;
+    }
+
     @include breakpoint(xs){
       font-size: 7.5rem;
     }
@@ -81,22 +85,22 @@
     font-size      : 3rem;
 
     &.copy-projects {
-      font-size: 2.47rem;
+      font-size: 1.47rem;
     }
 
     &.copy-about {
-      font-size: 2.65rem;
+      font-size: 1.65rem;
     }
 
     @include breakpoint(xs){
         font-size      : 1rem;
 
         &.copy-projects {
-          font-size: 1.4rem;
+          font-size: 1rem;
         }
 
         &.copy-about {
-          font-size: 1.4rem;
+          font-size: 1rem;
         }
     }
 }
@@ -129,11 +133,17 @@
 }
 
 .home-message {
-  margin-top: 1rem;
-  font-size: 1.75rem;
+  // margin-top: 1rem;
+  margin: 0 auto 1rem;
+  font-size: 2.5rem;
 
-  @include breakpoint(md){
-    font-size: 1rem;
+  @include breakpoint(md) {
+    font-size: 2rem;
+  }
+
+  @include breakpoint(sm) {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
   }
 }
 
