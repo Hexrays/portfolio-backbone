@@ -4,14 +4,6 @@
 // **************************************************
 // **************************************************
 
-#about {
-    margin-top      : -48px;
-
-    @include breakpoint(xs){
-        margin-top : 48px;
-    }
-}
-
 .about-content {
     margin     : auto;
     max-width  : 640px;
@@ -28,18 +20,32 @@
     color          : $mainLink;
     text-transform : uppercase;
     font-weight    : bold;
-    font-size      : 6rem;
+    // font-size      : 6rem;
+    font-size      : 3rem;
     font-family    : $mainHeader;
     transition     : font-size 0.3s ease;
 
-    @include breakpoint(md){
-        font-size : 4.5rem;
+    @include breakpoint(md) {
+        font-size : 2.25rem;
     }
 
-    @include breakpoint(sm){
-        font-size : 2.5rem;
+    @include breakpoint(sm) {
+        font-size : 1.55rem;
     }
 }
+
+.about-subheader {
+    margin-top     : 1.25rem;
+    text-transform : uppercase;
+    color          : #000;
+    font-family    : $mainHeader;
+    font-size      : 1.75rem;
+
+    @include breakpoint(sm){
+      font-size: 1.35rem;
+    }
+}
+
 
 .about-message, .about-links, .about-interests {
     padding-top : 0.75rem;
@@ -47,14 +53,46 @@
     transition  : font-size 0.3s ease;
 }
 
+.about-me {
+  font-size: 110%;
+  text-transform: uppercase;
+}
+
 .about-message {
     color       : $mainLink;
-    font-size   : 1.75rem;
+    font-size   : 1.5rem;
     font-family : $mainHeader;
 
     @include breakpoint(sm){
         font-size : 1.1rem;
     }
+}
+
+.about-message-link {
+  position: relative;
+  transition : color 0.25s ease;
+  z-index: 1;
+  color : $mainLink;
+
+  &:after {
+      content: '';
+      position: absolute;
+      bottom: 14%;
+      left: 0;
+      height: 4px;
+      width: 100%;
+      z-index: 0;
+      background-color: rgba( #000,0);
+      transition: background-color 0.25s;
+  }
+
+  .no-touch &:hover {
+      color : $mainLink;
+
+      &:after {
+        background-color: rgba( #000,0.25);
+      }
+  }
 }
 
 .about-interests {
@@ -80,4 +118,9 @@
     display       : block;
     margin-bottom : 2px;
     font-size     : 1.1rem;
+
+    @include breakpoint(xs){
+      font-size: 0.9rem;
+      margin-bottom: 4px;
+    }
 }

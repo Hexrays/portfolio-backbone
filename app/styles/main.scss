@@ -35,10 +35,11 @@ body {
 
 .flex-page {
   display         : flex;
-  min-height: 100%;
-  width: 100%;
+  min-height      : 100%;
+  width           : 100%;
   justify-content : center;
   align-content   : center;
+  padding-top     : 3rem;
 }
 
 img {
