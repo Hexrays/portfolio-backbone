@@ -24,7 +24,6 @@ app.AppView = Backbone.View.extend({
 
     displayHome: function(){
         app.router.navigate('', true);
-        console.log('homey');
         ga('send', 'event', 'click', 'Home');
         return false;
     },

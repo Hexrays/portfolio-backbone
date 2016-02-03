@@ -42,7 +42,7 @@ app.HomeView = Backbone.View.extend({
         console.log(track);
         ga('send', 'event', 'click', track);
         this.explode(this.$homeSpans, center);
-        _.delay(this.navigateToPage, 400, targetPage);
+        _.delay(this.navigateToPage, 600, targetPage);
     },
 
     navigateToPage(page) {
@@ -130,7 +130,7 @@ app.HomeView = Backbone.View.extend({
             scale      : scale,
             opacity    : op
         }, {
-            duration : 400,
+            duration : 500,
             // delay    : 700,
             easing   : [0.07, .67, 0, 1]
             // easing   : 'easeOutQuart'

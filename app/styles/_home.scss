@@ -47,37 +47,28 @@
 }
 
 // .home-header {
-//     font-size  : 8rem;
-//     transition : font-size 0.25s ease;
+//     font-size: 12rem;
+//     line-height: 0.9;
 
-//     @include breakpoint(xs){
-//         font-size : 4.5rem;
+//     @include breakpoint(md){
+//       font-size: 13rem;
 //     }
 
-//     em {
-//         color       : $mainLink;
-//         font-weight : bold;
+//     @include breakpoint(xs){
+//       font-size: 7.5rem;
 //     }
 // }
 
 .home-header {
-    font-size: 15rem;
-    line-height: 0.9;
+    font-size      : 9rem;
+    line-height: 1;
 
-    @include breakpoint(md){
-      font-size: 13rem;
+    @include breakpoint(md) {
+      font-size: 7rem;
     }
 
-    @include breakpoint(xs){
-      font-size: 7.5rem;
-    }
-}
-
-.home-subheader {
-    font-size      : 8rem;
-
-    @include breakpoint(xs){
-        font-size      : 4.5em;
+    @include breakpoint(sm) {
+      font-size: 4rem;
     }
 }
 
