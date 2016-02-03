@@ -21,28 +21,28 @@
     text-transform : uppercase;
     font-weight    : bold;
     // font-size      : 6rem;
-    font-size      : 3rem;
+    font-size      : 6rem;
     font-family    : $mainHeader;
     transition     : font-size 0.3s ease;
 
     @include breakpoint(md) {
-        font-size : 2.25rem;
+        font-size : 4rem;
     }
 
     @include breakpoint(sm) {
-        font-size : 1.55rem;
+        font-size : 2rem;
     }
 }
 
 .about-subheader {
-    margin-top     : 1.25rem;
+    margin-top     : 1.5rem;
     text-transform : uppercase;
-    color          : #000;
+    color          : $mainLink;
     font-family    : $mainHeader;
-    font-size      : 1.75rem;
+    font-size      : 1.5rem;
 
     @include breakpoint(sm){
-      font-size: 1.35rem;
+      // font-size: 1.35rem;
     }
 }
 
@@ -53,18 +53,35 @@
     transition  : font-size 0.3s ease;
 }
 
+.about-links {
+  padding-top: 1.75rem;
+}
+
 .about-me {
   font-size: 110%;
   text-transform: uppercase;
 }
 
 .about-message {
-    color       : $mainLink;
-    font-size   : 1.5rem;
-    font-family : $mainHeader;
+    color: $grey;
+    font-size   : 1rem;
+
+    &.main {
+      font-size   : 1.3rem;
+    }
+
+    @include breakpoint(md) {
+        &.main {
+          font-size   : 1.2rem;
+        }
+    }
 
     @include breakpoint(sm){
-        font-size : 1.1rem;
+        &.main {
+          font-size   : 1rem;
+        }
+        font-size : 0.9rem;
+        padding-top: 0.25rem;
     }
 }
 
@@ -72,12 +89,12 @@
   position: relative;
   transition : color 0.25s ease;
   z-index: 1;
-  color : $mainLink;
+  color : $grey;
 
   &:after {
       content: '';
       position: absolute;
-      bottom: 14%;
+      bottom: 10%;
       left: 0;
       height: 4px;
       width: 100%;
@@ -98,7 +115,7 @@
 .about-interests {
     color       : $grey;
 
-    @include breakpoint(sm){
+    @include breakpoint(sm) {
         font-size : 0.9rem;
     }
 }
@@ -108,7 +125,7 @@
     padding-right : 0.25em;
     color         : $grey;
 
-    @include breakpoint(xs){
+    @include breakpoint(xs) {
         display   : block;
         font-size : 0.9rem;
     }
@@ -119,8 +136,8 @@
     margin-bottom : 2px;
     font-size     : 1.1rem;
 
-    @include breakpoint(xs){
+    @include breakpoint(xs) {
       font-size: 0.9rem;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
 }
