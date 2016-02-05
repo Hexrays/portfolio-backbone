@@ -39,7 +39,7 @@ app.HomeView = Backbone.View.extend({
             x : e.clientX,
             y : e.clientY
         };
-        console.log(track);
+
         ga('send', 'event', 'click', track);
         this.explode(this.$homeSpans, center);
         _.delay(this.navigateToPage, 600, targetPage);
