@@ -16,6 +16,10 @@
     }
 }
 
+.site-title {
+  text-align: center;
+}
+
 .about-header {
     color          : $mainLink;
     text-transform : uppercase;
@@ -30,7 +34,7 @@
     }
 
     @include breakpoint(sm) {
-        font-size : 2rem;
+        font-size : 2.25rem;
     }
 }
 
