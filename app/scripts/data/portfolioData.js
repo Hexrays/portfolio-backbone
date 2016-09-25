@@ -12,8 +12,19 @@ app.siteData = [
         image            : 'images/dwtf.jpg',
         url              : 'http://www.deutschwtf.com/',
         client           : 'Deutsch'
-    },{
+    }, {
         id               : 2,
+        title            : 'International Space Station Tracker',
+        className        : 'isst',
+        description      : 'This site visualizes the orbital path of the International Space Station by plotting the current latitude and longitude of the space station from the Open Notify API.',
+        responsibilities : 'The ISS Tracker was built as a weekend project to play with some of my favorite technologies. It was built with React and Redux.',
+        company          : 'Hexrays',
+        year             : '2016',
+        image            : 'images/isst.jpg',
+        url              : 'https://space-station-tracker.herokuapp.com/',
+        client           : 'Personal project'
+    }, {
+        id               : 3,
         title            : 'Time To Up&nbspIt',
         className        : 'ttui',
         description      : 'This site is a part of Prudential\'s Bring Your Challenges suite of online tools. At Luxurious Animals we build an interactive tool that calculates how much more money you would have in retirement by increasing your contribution now.',
@@ -23,8 +34,8 @@ app.siteData = [
         url              : 'http://www.bringyourchallenges.com/time-to-up-it',
         image            : 'images/ttui.jpg',
         client           : 'Prudential'
-    },{
-        id               : 3,
+    }, {
+        id               : 4,
         title            : 'Christmas Price Index 2015',
         className        : 'cpi',
         description      : 'PNC Bank built the world\'s first working bank made of gingerbread. The site employs an augmented reality virtual tour of the branch to explore the prices of each gift in the 12 days of Christmas.',
@@ -34,8 +45,8 @@ app.siteData = [
         image            : 'images/cpi.jpg',
         url              : 'https://www.pncchristmaspriceindex.com',
         client           : 'PNC Bank'
-    },{
-        id               : 4,
+    }, {
+        id               : 5,
         title            : 'Ultra-Hd Article',
         className        : 'uhd',
         description      : 'I joined Access Intelligence to work with a small team on a series of parallax scrolling articles.',
@@ -45,8 +56,8 @@ app.siteData = [
         image            : 'images/ultrahd.png',
         url              : 'http://www.satellitetoday.com/long-form-stories/ultra-hd-coming-to-a-screen-near-you/',
         client           : 'Via Satellite'
-    },{
-        id               : 5,
+    }, {
+        id               : 6,
         title            : 'Paint On',
         className        : 'painton',
         description      : 'PaintOn.com lets you fuel your creative flame with HGTV HOME by Sherwin-Williams. Browse Color Collections, paint products, and inspiration and get inspired to Paint On.',
@@ -56,8 +67,8 @@ app.siteData = [
         image            : 'images/painton.jpg',
         url              : 'http://www.painton.com/',
         client           : 'Sherwin-Williams'
-    },{
-        id               : 6,
+    }, {
+        id               : 7,
         title            : 'Aarting',
         className        : 'aart',
         description      : 'Aarting is a site for artists to create and sell their own limited-edition products.',
@@ -67,8 +78,8 @@ app.siteData = [
         image            : 'images/aarting.jpg',
         url              : 'http://aarting.com/',
         client           : 'aarting'
-    },{
-        id               : 7,
+    }, {
+        id               : 8,
         title            : 'Halloween Party',
         className        : 'halloween',
         description      : 'A Micro site created to promote a Halloween bash.',
@@ -78,8 +89,8 @@ app.siteData = [
         image            : 'images/halloween.png',
         url              : 'http://hexrays.at/parties/halloween2013/',
         client           : 'Personal project'
-    },{
-        id               : 8,
+    }, {
+        id               : 9,
         title            : 'How Much Is&nbspEnough?',
         className        : 'hmie',
         description      : 'Part of Prudential\'s Bring Your Challenges suite of online tools, the team at Luxurious Animals built this calculator shows how long your money will last in&nbspretirement.',
@@ -89,8 +100,8 @@ app.siteData = [
         url              : 'http://www.bringyourchallenges.com/how-much-is-enough',
         image            : 'images/ribbon.jpg',
         client           : 'Prudential'
-    },{
-        id               : 9,
+    }, {
+        id               : 10,
         title            : 'Boat Party',
         className        : 'boat',
         description      : 'A Micro site created in lieu of a traditional invitation to an epic New Years Eve Birthday Celebration.',
@@ -100,8 +111,8 @@ app.siteData = [
         image            : 'images/boat.jpg',
         url              : 'http://nyeboatparty2014.com/',
         client           : 'Personal project'
-    },{
-        id               : 10,
+    }, {
+        id               : 11,
         title            : 'Pinkie Pie\'s Party',
         className        : 'ppp',
         description      : 'One in a series of games developed by the Luxurious Animals team for Hasbro\'s My Little Pony.' ,
@@ -111,8 +122,8 @@ app.siteData = [
         image            : 'images/mlp-ppp.jpg',
         url              : 'http://www.hasbro.com/mylittlepony/en_US/play/details.cfm?R=A7A8E37F-5056-9047-F5B3-857B4C5D26B4:en_US',
         client           : 'Hasbro'
-    },{
-        id               : 11,
+    }, {
+        id               : 12,
         title            : 'Folio 100',
         className        : 'folio',
         description      : 'The Folio 100 is an awards program celebrating members of the magazine and media industry.' ,
@@ -122,8 +133,8 @@ app.siteData = [
         image            : 'images/folio100.jpg',
         url              : 'http://www.medianextshow.com/folio100/#/',
         client           : 'The Folio: Show'
-    },{
-        id               : 12,
+    }, {
+        id               : 13,
         title            : 'Stripe Yourself',
         className        : 'stripe',
         description      : 'Stripe Yourself is an app for the San Diego Zoo that allows users to upload photos and decorate their face with tiger stripes, fur, eyes, ears and whiskers. It works across browsers and on mobile devices.',
@@ -133,8 +144,8 @@ app.siteData = [
         url              : 'http://sdzsafaripark.org/stripeyourself/',
         image            : 'images/stripe.jpg',
         client           : 'San Diego Zoo'
-    },{
-        id               : 13,
+    }, {
+        id               : 14,
         title            : 'Ken Hunt',
         className        : 'ken',
         description      : 'Ken Hunt is an HTML5 game I built as a joke for friend on his birthday.',
@@ -150,7 +161,7 @@ app.siteData = [
 
 
 
-    // },{
+    // }, {
     //     id               : 2,
     //     title            : 'LNKSY',
     //     className        : 'lnksy',
@@ -162,7 +173,7 @@ app.siteData = [
     //     url              : 'http://lnksy.herokuapp.com/users/1',
     //     keywords         : ['HTML', 'CSS', 'JavaScript', 'jQuery', 'Ruby', 'Ruby on Rails', 'responsive']
 
-        // },{
+        // }, {
     //     id               : 12,
     //     title            : 'West Point Foundry Preserve&nbspTour',
     //     className        : 'wpfp',

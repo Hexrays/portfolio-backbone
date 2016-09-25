@@ -158,6 +158,10 @@
         background : lighten(desaturate($paintonColTop,20%), 25%);
     }
 
+    &.isst {
+        background : lighten(desaturate($isstColTop,20%), 25%);
+    }
+
 }
 
 .img-container {
@@ -242,6 +246,10 @@
 
     .painton & {
         @include background-gradient($paintonColTop, $paintonColBottom, to bottom);
+    }
+
+    .isst & {
+        @include background-gradient($isstColTop, $isstColBottom, to top);
     }
 
     @include breakpoint(xl, min ) {
